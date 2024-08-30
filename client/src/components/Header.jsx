@@ -1,8 +1,14 @@
+import "../style/Header.css";
+
 function Header() {
-    return (
-     <h1>coucou</h1>
-    );
-  }
-  
-  export default Header;
-  
+  return (
+
+
+          <header>
+    <h1>oui oui</h1>
+      </header>
+    
+  );
+}
+
+export default Header;
