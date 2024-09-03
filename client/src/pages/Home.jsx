@@ -1,6 +1,6 @@
 function Home() {
   return( 
-      <><h1>oui</h1><h2>coucou</h2></>
+      <><h1>oui</h1><h2>co</h2></>
   ) 
 }
 
