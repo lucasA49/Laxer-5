@@ -1,15 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: Poppins;
-}
-
-a {
-  text-decoration: none;
-  color: #000;
 }
 
 .Header {
@@ -17,46 +9,45 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
-  background: #ff0000;
+  padding-top: 1rem;
+  background: #ffffff;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   z-index: 100;
   height: 10vh;
 }
 
-.Contact-btn {
-  background: #ff0000;
-  padding: 2px 10px;
-  border: 1px solid #000;
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 10px;
-  font-weight: 700;
-}
-
-.logo {
-  font-size: 32px;
-  color: #fff;
-  font-weight: 700;
+.rounded-img {
+  top: 0;
 }
 
 .Header a {
-  font-size: 18px;
-  color: #fff;
+  font-size: 2vh;
+  color: #000000;
   font-weight: 500;
-  margin-left: 40px;
+  margin-left: 8rem;
+  text-decoration: none;
+  color: #000;
+  left: 10rem;
 }
 
 .HeaderNavlink :hover {
-  color: #000000;
+  color: #321919;
+  transform: scale(1.05);
 }
 
-.Header .Contact-btn:hover {
-  color: #ffffff;
+.contactbtn {
+  position: relative;
 }
-.logo {
-  height: 20rem;
-  padding-top: 0.5rem;
+
+.navbar {
+  position: relative;
+  font-size: 1rem;
+  left: 1rem;
+}
+
+.contactbtn {
+  background-color: #bc1a1a;
+  border-radius: 20px;
+  padding: 0.5rem 1.2rem;
 }
