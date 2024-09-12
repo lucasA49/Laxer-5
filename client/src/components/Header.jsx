@@ -1,4 +1,4 @@
-import {  Link } from "react-router-dom"; // Une seule importation de react-router-dom
+import { Link } from "react-router-dom";
 import "../style/Header.css";
 import logo from "../assets/logo/logo.png";
 
@@ -10,10 +10,12 @@ function Header() {
       </figure>
 
       <nav className="navbar">
-        <Link to="/">Accueil</Link>
+        <Link to="/acceuil">Accueil</Link>
         <Link to="/services">Services</Link>
         <Link to="/entreprise">L'entreprise</Link>
         <Link to="/machines">Nos machines</Link>
+      </nav>
+      <nav>
         <Link className="contactbtn" to="/contact">
           Contact
         </Link>
