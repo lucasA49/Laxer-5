@@ -1,8 +1,10 @@
+import "../style/Bodyhome.css";
+
 function Bodyhome() {
   return (
-    <div>
+    <div className="bodihome">
       <h1>oui</h1>
-      <p>oui</p>
+      <h2>pd</h2> <p>oui</p>
     </div>
   );
 }
