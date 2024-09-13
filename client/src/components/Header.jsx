@@ -2,12 +2,10 @@ import "../style/Header.css";
 
 function Header() {
   return (
-
-
-          <header>
-    <h1>oui oui</h1>
-      </header>
-    
+    <div className="headercolor">
+      <h1>ouoioui</h1>
+      <h2>ouioui</h2>
+    </div>
   );
 }
 
