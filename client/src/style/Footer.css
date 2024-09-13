@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+.footer {
+  background-color: #f8f9;
+  padding-left: 10px;
+  height: 10vh;
+  bottom: 0;
+}
+
+.footer-content {
+  display: flex;
+  width: 100%;
+}
+
+.logofooter {
+  height: 60px;
+  margin: 0.8rem;
+}
+
+.textfooter {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
