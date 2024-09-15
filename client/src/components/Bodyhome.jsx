@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "../style/Bodyhome.css";
-import tetealfa from "../assets/Image/tetealfa.png";
-import prcn from "../assets/Image/prcn.png";
+import Acceuil1 from "../assets/Image/Acceuil.png";
 
 function Bodyhome() {
   return (
@@ -19,8 +18,7 @@ function Bodyhome() {
           <br /> Près de Nantes
         </h2>
         <div className="header-images">
-          <img className="tetealfa1" src={tetealfa} alt="Découpe laser" />
-          <img className="prcn" src={prcn} alt="Machine de pliage" />
+          <img className="Acceuil1" src={Acceuil1} alt="Découpe laserpliage" />
         </div>
       </div>
 
@@ -50,7 +48,7 @@ function Bodyhome() {
             besoins en pliage de tôle sur mesure grâce à notre parc de machines
             dédiées.
           </p>
-          <nav className="arrow">
+          <nav className="arrow1">
             <Link to="/pliage"> Découvrir →</Link>
           </nav>
         </div>
