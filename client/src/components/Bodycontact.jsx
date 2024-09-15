@@ -1,5 +1,7 @@
 import "../style/bodycontact.css";
 import mail from "../assets/icone/email.png";
+import localisation from "../assets/icone/location.png";
+import phone from "../assets/icone/phone.png";
 
 function Bodycontact() {
   return (
@@ -9,13 +11,23 @@ function Bodycontact() {
           <h2>Nous Contactez</h2>
           <p>Contactez-nous en remplissant le formulaire suivant.</p>
           <ul>
-            <li>📍 ZI de Maunit - 134 rue des Pâtis </li>
+            <li>
+              <img
+                className="locationicone"
+                src={localisation}
+                alt="Icône localisation"
+              />
+              ZI de Maunit - 134 rue des Pâtis
+            </li>
             <li className="mortagnesursevre">Mortagne-sur-Sèvre</li>
             <li>
               <img className="mailicone" src={mail} alt="Icône email" />
               jp.graton@laxer5.fr
             </li>
-            <li>📞 02 51 57 65 15</li>
+            <li>
+              <img className="phoneicone" src={phone} alt="Icône téléphone" />
+              02 51 57 65 15
+            </li>
           </ul>
         </div>
 
@@ -25,8 +37,8 @@ function Bodycontact() {
             <input type="text" placeholder="Nom Prénom" required />
             <input type="email" placeholder="Email" required />
             <input type="tel" placeholder="Téléphone" />
-            <textarea>Votre Message</textarea>
-            <label htmlFor="file">Sélectionnez un fichier :</label>
+            <textarea placeholder="Votre message" />
+            {/* <textarea placeholder="Votre message"> </textarea> */}
             <input type="file" id="file" />
             <button type="submit">Envoyé</button>
           </form>

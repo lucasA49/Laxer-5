@@ -1,4 +1,5 @@
 .container-body {
+  margin-top: 15rem;
   height: 100vh;
 }
 .contact-container {
@@ -15,7 +16,6 @@
   max-width: 1200px;
 }
 
-/* Style pour la colonne de gauche - informations de contact */
 .contact-info {
   margin-top: 16rem;
   background-color: #fff;
@@ -35,7 +35,7 @@
 }
 
 .contact-info h2 {
-  color: #d72638;
+  color: #d10101;
   margin-bottom: 20px;
   font-size: 1.8rem;
 }
@@ -44,7 +44,7 @@
 .contact-info ul,
 .contact-info li {
   font-size: 1.1rem;
-  color: #555;
+  color: #000000;
   margin-bottom: 15px;
 }
 
@@ -76,13 +76,12 @@
 }
 
 .social-icons a:hover {
-  color: #d72638;
+  color: #d10101;
 }
 
-/* Style pour la colonne de droite - formulaire de contact */
 .contact-form {
   margin-top: 4rem;
-  background-color: #d72638;
+  background-color: #d10101;
   padding: 30px;
   border-radius: 20px;
   flex: 1;
@@ -138,7 +137,7 @@
 .contact-form input[type="tel"]:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #ff5e5e;
+  border-color: #d10101;
 }
 
 .contact-form textarea {
@@ -153,7 +152,7 @@
 
 .contact-form button {
   background-color: #fff;
-  color: #d72638;
+  color: #d10101;
   font-weight: bold;
   cursor: pointer;
   transition:
@@ -166,7 +165,6 @@
   color: white;
 }
 
-/* Style responsive pour mobile */
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
@@ -184,4 +182,37 @@
 }
 .mailicone {
   height: 1.6rem;
+}
+
+.phoneicone {
+  height: 1.6rem;
+}
+
+.locationicone {
+  height: 1.6rem;
+}
+
+.contact-form input[type="file"] {
+  display: none;
+}
+
+.contact-form input[type="file"] {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 1rem;
+  display: inline-block;
+  width: auto;
+  max-width: 30rem;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  border: 2px solid #e0e0e0;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
