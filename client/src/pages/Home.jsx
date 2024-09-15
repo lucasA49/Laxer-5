@@ -1,13 +1,14 @@
 import Header from "../components/Header";
+import Bodyhome from "../components/Bodyhome";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
-    <div>
+    <>
       <Header />
-
-      <h1>oui</h1>
-      <h2>co</h2>
-    </div>
+      <Bodyhome />
+      <Footer />
+    </>
   );
 }
 
