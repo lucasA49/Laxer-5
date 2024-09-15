@@ -82,7 +82,7 @@
   color: black;
 }
 
-.service-card.pliage button {
+.service-card.pliage nav {
   background-color: black;
   color: white;
 }
@@ -102,7 +102,7 @@
   margin-bottom: 1.5rem;
 }
 
-.service-content button {
+.service-content nav {
   background-color: white;
   color: black;
   padding: 10px 20px;
@@ -114,11 +114,21 @@
   align-items: center;
 }
 
-.service-content button .arrow {
+.service-content nav.arrow {
   margin-left: 5px;
 }
 
-.service-content button:hover {
+.service-content nav:hover {
   background-color: #333;
   color: white;
+}
+
+.service-content nav a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.service-content nav a {
+  text-decoration: none;
+  color: #fff;
 }
