@@ -15,7 +15,7 @@ function Bodyhome() {
             <span className="highlight">
               <br />
               Découpe laser 2D / 3D
-              <br /> Pliage de haute précision
+              <br /> Pliage de haute précision.
             </span>
             <br /> Près de Nantes
           </h2>
