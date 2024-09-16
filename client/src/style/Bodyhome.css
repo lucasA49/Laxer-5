@@ -14,21 +14,28 @@
 }
 
 .header {
-  text-align: left;
+  display: flex; /* Utilise flexbox pour aligner les éléments horizontalement */
+  justify-content: space-between; /* Espace entre les éléments */
+  align-items: flex-start; /* Aligne les éléments au début pour qu'ils aient la même hauteur */
   margin: 2rem 0;
 }
 
+.header .text-content {
+  max-width: 60%;
+}
+
 .header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: black;
   line-height: 1.3;
   margin-top: 10rem;
+  margin-left: 10rem;
 }
 
 .header h2 {
   font-size: 2.5rem;
   color: black;
-  line-height: 1.3;
+  margin-left: 10rem;
 }
 
 .header .highlight {
@@ -38,33 +45,41 @@
 
 .header-images {
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  justify-content: flex-end;
 }
 
 .header-images img {
-  width: 32%;
+  width: 100%;
+  max-width: 80rem;
   border-radius: 8px;
+  margin-top: 10rem;
+  margin-right: 8rem;
 }
 
 .services-title {
   font-size: 2rem;
   margin: 2rem 0;
   text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
 .service-card {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 5rem;
+  margin-right: 5rem;
+  height: 30rem;
 }
 
 .service-card img {
   width: 50%;
   object-fit: cover;
+  height: 30rem;
 }
 
 .service-content {
@@ -75,20 +90,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.service-card.pliage .service-content {
-  background-color: #e6f0f5;
-  color: black;
-}
-
-.service-card.pliage nav {
-  background-color: black;
-  color: white;
-}
-
-.service-card.laser .service-content {
-  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .service-content h3 {
@@ -112,10 +113,20 @@
   border-radius: 5px;
   display: flex;
   align-items: center;
+  margin-top: 5rem;
 }
 
 .service-content nav.arrow {
   margin-left: 5px;
+}
+
+.service-content nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+.service-content nav a:hover {
+  color: #fff;
 }
 
 .service-content nav:hover {
@@ -123,12 +134,28 @@
   color: white;
 }
 
-.service-content nav a {
-  text-decoration: none;
-  color: #000000;
+.service-card.laser .service-content {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.service-content nav a {
-  text-decoration: none;
+.service-card.laser nav a {
+  color: #000;
+}
+
+.service-card.pliage .service-content {
+  background-color: #e6f0f5;
+  color: black;
+}
+
+.service-card.pliage nav {
+  background-color: black;
+  color: white;
+}
+
+.service-card.pliage nav a {
   color: #fff;
+}
+
+.service-card.pliage nav:hover {
+  background-color: #444; /* Change background color on hover */
 }
