@@ -82,6 +82,7 @@ function BodyContact() {
 
         <div className="contact-form">
           <h2>Contact</h2>
+ 
           {notification && <div className="notification">{notification}</div>}
           <form onSubmit={handleSubmit}>
             <input
