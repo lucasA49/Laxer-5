@@ -38,7 +38,6 @@ function Bodycontact() {
             <input type="email" placeholder="Email" required />
             <input type="tel" placeholder="Téléphone" />
             <textarea placeholder="Votre message" />
-            {/* <textarea placeholder="Votre message"> </textarea> */}
             <input type="file" id="file" />
             <button type="submit">Envoyé</button>
           </form>

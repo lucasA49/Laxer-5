@@ -1,22 +1,25 @@
 import { Link } from "react-router-dom";
 import "../style/Bodyhome.css";
 import Acceuil1 from "../assets/Image/Acceuil.png";
+import Decoupe from "../assets/Image/Decoupe.jpg";
 
 function Bodyhome() {
   return (
     <div className="bodyhome">
       <div className="header">
-        <h1>LAXER 5,</h1>
-        <h2>
-          <br />
-          Spécialiste
-          <span className="highlight">
+        <div className="text-content">
+          <h1>LAXER 5,</h1>
+          <h2>
             <br />
-            Découpe laser 2D / 3D
-            <br /> Pliage de haute précision
-          </span>
-          <br /> Près de Nantes
-        </h2>
+            Spécialiste
+            <span className="highlight">
+              <br />
+              Découpe laser 2D / 3D
+              <br /> Pliage de haute précision
+            </span>
+            <br /> Près de Nantes
+          </h2>
+        </div>
         <div className="header-images">
           <img className="Acceuil1" src={Acceuil1} alt="Découpe laserpliage" />
         </div>
@@ -37,7 +40,7 @@ function Bodyhome() {
             <Link to="/découpelaser"> Découvrir →</Link>
           </nav>
         </div>
-        <img src="laser-service.jpg" alt="Découpe Laser" />
+        <img className="Decoupe" src={Decoupe} alt="Découpe laser" />
       </div>
 
       <div className="service-card pliage">
@@ -57,4 +60,5 @@ function Bodyhome() {
     </div>
   );
 }
+
 export default Bodyhome;
