@@ -1,7 +1,7 @@
 import { useState } from "react";
-/* eslint-disable */
+
 import emailjs from "@emailjs/browser";
-/* eslint-enable */
+
 import "../style/bodycontact.css";
 import mail from "../assets/icone/email.png";
 import localisation from "../assets/icone/location.png";
@@ -82,7 +82,7 @@ function BodyContact() {
 
         <div className="contact-form">
           <h2>Contact</h2>
- 
+
           {notification && <div className="notification">{notification}</div>}
           <form onSubmit={handleSubmit}>
             <input

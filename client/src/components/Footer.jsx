@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../style/Footer.css";
 import logo from "../assets/logo/logo.png";
 
@@ -8,8 +9,10 @@ function Footer() {
         <img className="logofooter" src={logo} alt="Logo" />
         <p className=" textfooter">
           {" "}
-          Copyright © 2024 Laxer 5 | Tous droits réservés. Voir les mentions
-          légales{" "}
+          Copyright © 2024 Laxer 5 | Tous droits réservés. Voir les{" "}
+          <Link className="lienmentionslegales" to="/mentions-legales">
+            mentions légales
+          </Link>
         </p>
       </div>
     </footer>

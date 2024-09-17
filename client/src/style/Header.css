@@ -26,8 +26,9 @@
 
 .rounded-img {
   width: 2vh;
-  height: 12vh;
+  height: 38vh;
   border-radius: 50%;
+  scale: 0.4;
 }
 
 .navbar {
@@ -85,8 +86,9 @@
   }
 
   .rounded-img {
-    width: 10vh;
-    height: 10vh;
+    margin-right: 10vh;
+    margin-left: -5vh;
+    scale: 0.3;
   }
 }
 

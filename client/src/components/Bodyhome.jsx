@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import "../style/Bodyhome.css";
 import Acceuil1 from "../assets/Image/Acceuil.png";
 import Decoupe from "../assets/Image/Decoupe.jpg";
+import decoupealfa from "../assets/Image/decoupealfa.png";
+import pieceplié from "../assets/Image/pieceplié.jpg";
 
 function Bodyhome() {
   return (
@@ -27,6 +29,22 @@ function Bodyhome() {
 
       <h2 className="services-title">Nos Services</h2>
 
+      <div className="service-card laser3d">
+        <div className="service-content">
+          <h3>Découpe Laser 3D</h3>
+          <p>
+            Nous proposons des solutions de découpe laser de haute précision sur
+            tous types de métaux : acier, aluminium. Grâce à la variété du
+            prototypage à la production en série du plus standard au plus
+            spécifique et complexe.
+          </p>
+          <nav className="arrow">
+            <Link to="/découpelaser3d"> Découvrir ➜</Link>
+          </nav>
+        </div>
+        <img className="Decoupe" src={decoupealfa} alt="Découpe laser" />
+      </div>
+
       <div className="service-card laser">
         <div className="service-content">
           <h3>Découpe Laser</h3>
@@ -37,7 +55,7 @@ function Bodyhome() {
             spécifique et complexe.
           </p>
           <nav className="arrow">
-            <Link to="/découpelaser"> Découvrir →</Link>
+            <Link to="/découpelaser"> Découvrir ➜</Link>
           </nav>
         </div>
         <img className="Decoupe" src={Decoupe} alt="Découpe laser" />
@@ -52,10 +70,10 @@ function Bodyhome() {
             dédiées.
           </p>
           <nav className="arrow1">
-            <Link to="/pliage"> Découvrir →</Link>
+            <Link to="/pliage"> Découvrir ➜</Link>
           </nav>
         </div>
-        <img src="pliage-service.jpg" alt="Pliage" />
+        <img className="Pliage" src={pieceplié} alt="Pliage" />
       </div>
     </div>
   );

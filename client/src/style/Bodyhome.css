@@ -14,9 +14,9 @@
 }
 
 .header {
-  display: flex; /* Utilise flexbox pour aligner les éléments horizontalement */
-  justify-content: space-between; /* Espace entre les éléments */
-  align-items: flex-start; /* Aligne les éléments au début pour qu'ils aient la même hauteur */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   margin: 2rem 0;
 }
 
@@ -71,9 +71,9 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-left: 5rem;
-  margin-right: 5rem;
-  height: 30rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  height: 20rem;
 }
 
 .service-card img {
@@ -113,7 +113,9 @@
   border-radius: 5px;
   display: flex;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 2rem;
+  margin-right: 28rem;
+  margin-bottom: 1rem;
 }
 
 .service-content nav.arrow {
@@ -145,6 +147,14 @@
 .service-card.pliage .service-content {
   background-color: #e6f0f5;
   color: black;
+}
+
+.service-card.pliage img {
+  height: 45rem;
+}
+
+.service-card.laser3d img {
+  height: 20rem;
 }
 
 .service-card.pliage nav {
