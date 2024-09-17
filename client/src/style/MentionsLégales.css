@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+.container-central {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10rem;
+  margin-bottom: 15rem;
+}
+
+/* Style des mentions légales */
+.mentions-legales {
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+}
+
+.mentions-legales h2 {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.mentions-legales p {
+  margin-bottom: 20px;
+}
+
+.mentions-legales a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.mentions-legales a:hover {
+  color: #23527c;
+}
