@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import Company from "./pages/Company";
 import MentionsLégales from "./pages/MentionsLégales";
 import App from "./App";
 
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/acceuil",
     element: <Home />,
+  },
+  {
+    path: "/Entreprise",
+    element: <Company />,
   },
   {
     path: "/mentions-legales",
