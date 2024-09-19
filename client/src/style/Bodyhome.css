@@ -18,6 +18,7 @@
   justify-content: space-between;
   align-items: flex-start;
   margin: 2rem 0;
+  margin-top: 3rem;
 }
 
 .header .text-content {
@@ -28,7 +29,6 @@
   font-size: 3rem;
   color: black;
   line-height: 1.3;
-  margin-top: 10rem;
   margin-left: 10rem;
 }
 
@@ -36,6 +36,8 @@
   font-size: 2.5rem;
   color: black;
   margin-left: 10rem;
+  margin-top: -23rem;
+  margin-bottom: 5rem;
 }
 
 .header .highlight {
@@ -60,7 +62,7 @@
   font-size: 2rem;
   margin: 2rem 0;
   text-align: center;
-  margin-top: 10rem;
+  margin-top: 15rem;
   margin-bottom: 10rem;
 }
 

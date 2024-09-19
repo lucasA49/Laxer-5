@@ -9,7 +9,7 @@
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-top: 15rem;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 .mentions-legales {
@@ -34,4 +34,8 @@
 
 .mentions-legales a:hover {
   color: #23527c;
+}
+
+footer {
+  margin-top: 10rem;
 }
