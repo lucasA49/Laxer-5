@@ -8,11 +8,10 @@
   border: 1px solid #ddd;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 10rem;
-  margin-bottom: 15rem;
+  margin-top: 15rem;
+  margin-bottom: 10rem;
 }
 
-/* Style des mentions légales */
 .mentions-legales {
   font-size: 16px;
   line-height: 24px;
