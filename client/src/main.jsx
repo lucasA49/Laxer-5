@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import Company from "./pages/Company";
 import MentionsLégales from "./pages/MentionsLégales";
 import App from "./App";
+import Services from "./pages/Services";
+import NosMachines from "./pages/NosMachines";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
   {
     path: "/mentions-legales",
     element: <MentionsLégales />,
+  },
+  {
+    path: "/services",
+    element: <Services />,
+  },
+  {
+    path: "/nosmachines",
+    element: <NosMachines />,
   },
 ]);
 
