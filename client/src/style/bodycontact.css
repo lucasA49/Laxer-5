@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
 .container-body {
   margin-top: 15rem;
   height: 100vh;
 }
+
 .contact-container {
   display: flex;
   flex-wrap: wrap;
