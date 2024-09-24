@@ -22,13 +22,11 @@ function Bodycompany() {
             de métaux, offrant des solutions sur mesure en tôlerie et découpe 3D
             métal. Fondée en 2008 et basée en Vendée, notre société s'impose
             comme un acteur clé dans l'industrie du travail des métaux.
-          </p>
-          <p>
+          <br />
             Forte de son expertise et de son savoir-faire, LAXER 5 se distingue
             par sa réactivité, la qualité de ses prestations, et son engagement
             à satisfaire les besoins spécifiques de chaque client.
-          </p>
-          <p>
+          <br />
             Nous sommes une entreprise à taille humaine, orientée vers
             l'innovation et la précision, avec une équipe dédiée qui met tout en
             œuvre pour garantir un service efficace et personnalisé.
