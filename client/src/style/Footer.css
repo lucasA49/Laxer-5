@@ -3,13 +3,16 @@
 .footer {
   background-color: #fff;
   padding-left: 10px;
-  height: 10vh;
+  height: 11.5vh;
   bottom: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  left: 0;
+  z-index: 1000;
 }
 
 .footer-content {
