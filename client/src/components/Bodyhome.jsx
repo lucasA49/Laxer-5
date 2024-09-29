@@ -39,7 +39,7 @@ function Bodyhome() {
             spécifique et complexe.
           </p>
           <nav className="arrow">
-            <Link to="/découpelaser3d"> Découvrir ➜</Link>
+            <Link to="/services"> Découvrir ➜</Link>
           </nav>
         </div>
         <img className="Decoupe" src={decoupealfa} alt="Découpe laser" />
@@ -55,7 +55,7 @@ function Bodyhome() {
             spécifique et complexe.
           </p>
           <nav className="arrow">
-            <Link to="/découpelaser"> Découvrir ➜</Link>
+            <Link to="/services"> Découvrir ➜</Link>
           </nav>
         </div>
         <img className="Decoupe" src={Decoupe} alt="Découpe laser" />
@@ -70,10 +70,10 @@ function Bodyhome() {
             dédiées.
           </p>
           <nav className="arrow1">
-            <Link to="/pliage"> Découvrir ➜</Link>
+            <Link to="/services"> Découvrir ➜</Link>
           </nav>
         </div>
-        <img className="Pliage" src={pieceplié} alt="Pliage" />
+        <img className="pliage" src={pieceplié} alt="Pliage" />
       </div>
     </div>
   );

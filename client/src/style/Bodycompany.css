@@ -4,8 +4,9 @@
   padding: 20px;
   background-color: #f4f4f4;
   color: #333;
-  font-family: Arial, sans-serif;
-  margin-top: 10rem;
+  font-family: Poppins;
+  margin-top: 6rem;
+  margin-bottom: -15rem;
 }
 
 .top-section {
@@ -17,6 +18,7 @@
 
 .left-side {
   flex: 1;
+  margin-top: 5rem;
 }
 
 .company-image {
@@ -72,48 +74,173 @@
   transform: scale(1.05);
 }
 
-.prestations-section {
-  text-align: center;
-  background-color: #ccc;
-  padding: 40px 20px;
-  border-radius: 8px;
-}
-
-.prestations-section h2 {
-  margin-bottom: 30px;
-  font-size: 2em;
-  color: black;
-}
-
-.prestations {
+/* sub header Section */
+.header-qualité {
+  position: relative;
+  padding: 60px 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  min-height: 20rem;
+  z-index: 1;
+  background-color: #d9d9d9;
+  margin-top: 10rem;
+  left: 50%;
+  width: calc(100% + 8rem);
+  overflow: hidden;
+  margin-right: -8rem;
+  height: 10px;
+  transform: translateX(-50%) rotate(3deg);
 }
 
-.prestation-item {
-  background-color: #555;
-  color: white;
+.header-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
   padding: 20px;
-  width: 200px;
+  transform: rotate(-3deg);
+}
+
+/* Style for Each Button */
+.header-button {
+  background-color: #9a9a9a;
+  color: black;
+  padding: 15px 30px;
+  border-radius: 20px;
+  font-size: 2em;
   text-align: center;
+  font-weight: 500;
+}
+
+/* Timeline Section */
+.timeline-section {
+  padding: 40px 20px;
+  background-color: white;
   border-radius: 8px;
+  margin-top: 8rem;
 }
 
-.prestation-item h3 {
-  margin-bottom: 15px;
+.timeline-section h2 {
+  color: #333;
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
-.plus-button {
+.timeline-line {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  padding-left: 100px;
+  border-left: 4px solid #e60000;
+  margin-top: 20px;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-content {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-year {
+  position: absolute;
+  left: -80px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 1.5em;
-  color: white;
-  background-color: black;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
+  font-weight: bold;
+  color: #e60000;
 }
 
-.plus-button:hover {
-  background-color: #e60000;
+.timeline-details h3 {
+  color: #333;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.timeline-details p {
+  color: #555;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.footer2 {
+  position: relative;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d9d9d9;
+  width: calc(100% + 8rem);
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%) rotate(3deg);
+  min-height: 22rem;
+  margin-left: -1rem;
+  margin-right: -8rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer-content2 {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transform: rotate(-3deg);
+  margin-left: 5rem;
+  margin-bottom: 3rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-top: 2.5rem;
+}
+
+.footer-links a {
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  color: black;
+  margin-right: 18rem;
+}
+
+.footer-socials {
+  margin-right: 3rem;
+}
+
+.footer-socials h4 {
+  margin-right: 3rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a:hover {
+  color: #d10101;
+}
+
+.footer-info h4 {
+  margin-left: 3rem;
+  font-size: 2em;
+}
+
+.footer-info address {
+  margin-left: 3rem;
+  font-weight: 500;
+}
+
+.footer-info p {
+  margin-left: 3rem;
+  font-weight: 600;
+  color: #e60000;
 }
