@@ -4,6 +4,7 @@ import logoentreprise from "../assets/Image/entreprise.jpg";
 import instagram from "../assets/icone/instagram.png";
 import linkedin from "../assets/icone/linkedin.png";
 import facebook from "../assets/icone/facebook.png";
+import scrolldownicon from "../assets/Image/scrolldownicon.png";
 
 function Bodycompany() {
   return (
@@ -40,6 +41,15 @@ function Bodycompany() {
           </NavLink>
         </div>
       </div>
+
+      <div className="scrolldown">
+        <img
+          className="scrolldown"
+          src={scrolldownicon}
+          alt="defile vers le bas"
+        />
+      </div>
+
       {/* Header Buttons */}
       <header className="header-qualité">
         <div className="header-buttons">
