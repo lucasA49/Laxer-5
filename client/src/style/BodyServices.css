@@ -4,7 +4,7 @@
   padding: 40px;
   background-color: #f7f7f7;
   margin-top: 7rem;
-  width: 100vw;
+  width: 100%;
   position: relative;
   box-sizing: border-box;
 }
@@ -19,15 +19,17 @@
   margin-bottom: 20px;
   margin-left: 10rem;
   margin-right: 10rem;
+  height: 30rem;
 }
 
 .specifications {
-  padding-right: 20px;
+  padding-right: 60px;
   border-right: 1px solid #ddd;
 }
 
 .specifications li {
   list-style-type: none;
+  line-height: 5rem;
 }
 
 .service-text {
