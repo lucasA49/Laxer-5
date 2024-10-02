@@ -5,8 +5,7 @@
   background-color: #f4f4f4;
   color: #333;
   font-family: Poppins;
-  margin-top: 6rem;
-  margin-bottom: -15rem;
+  margin-top: 5rem;
 }
 
 .top-section {
@@ -35,6 +34,7 @@
 .right-side h1 {
   color: #e60000;
   font-size: 2.5em;
+  margin-top: 3rem;
 }
 
 .right-side h2 {
@@ -52,7 +52,7 @@
 .right-side p {
   font-size: 1.1em;
   line-height: 1.6;
-  margin-bottom: 8rem;
+  margin-bottom: 12rem;
 }
 
 .cta-button {
@@ -72,6 +72,13 @@
   background-color: #333;
   color: #fff;
   transform: scale(1.05);
+}
+
+.scrolldown {
+  margin-top: -1rem;
+  display: flex;
+  justify-content: center;
+  opacity: 0.7;
 }
 
 /* sub header Section */
