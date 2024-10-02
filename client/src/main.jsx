@@ -38,6 +38,10 @@ const router = createBrowserRouter([
     path: "/nosmachines",
     element: <NosMachines />,
   },
+  {
+    path: "/admin",
+    element: <Home/>,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
