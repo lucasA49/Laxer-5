@@ -4,6 +4,7 @@ import Acceuil1 from "../assets/Image/Acceuil.png";
 import Decoupe from "../assets/Image/Decoupe.jpg";
 import decoupealfa from "../assets/Image/decoupealfa.png";
 import pieceplié from "../assets/Image/pieceplié.jpg";
+import scrolldownicon from "../assets/Image/scrolldownicon.png";
 
 function Bodyhome() {
   return (
@@ -25,6 +26,14 @@ function Bodyhome() {
         <div className="header-images">
           <img className="Acceuil1" src={Acceuil1} alt="Découpe laserpliage" />
         </div>
+      </div>
+
+      <div className="scrolldown">
+        <img
+          className="scrolldown"
+          src={scrolldownicon}
+          alt="defile vers le bas"
+        />
       </div>
 
       <h2 className="services-title">Nos Services</h2>
