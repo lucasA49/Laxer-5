@@ -1,0 +1,90 @@
+.laser-cutting-container {
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-top: 20rem;
+  margin-bottom: 10rem;
+}
+
+.laser-cutting-content {
+  display: flex;
+  flex-direction: row; /* Affiche le texte et l'image sur la même ligne */
+  justify-content: space-between;
+  align-items: flex-start; /* Alignement en haut */
+  padding: 20px;
+  background-color: #f7f7f7; /* Fond pour chaque section */
+}
+
+.laser-cutting-text {
+  width: 50%; /* Texte prend 50% de la largeur */
+  padding: 20px;
+}
+
+.laser-cutting-text h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.laser-cutting-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.specification {
+  display: flex;
+  flex-direction: column; /* Aligne les spécifications verticalement */
+  align-items: flex-start;
+  width: 100%;
+}
+
+.spec-items {
+  display: flex;
+  align-items: flex-start; /* Alignement en haut */
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+}
+
+.spec-items:last-child {
+  border-bottom: none; /* Supprimer la bordure du dernier élément */
+}
+
+.spec-title {
+  font-size: 18px;
+  font-weight: bold;
+  width: 200px; /* Largeur fixe pour garantir l'alignement */
+  margin-bottom: 0; /* Pas de marge pour un meilleur alignement */
+}
+
+.spec-items div {
+  display: flex;
+  flex-direction: column; /* Alignement vertical des paragraphes */
+}
+
+.spec-items p {
+  font-size: 16px;
+  margin: 0; /* Pas de marge pour un meilleur alignement */
+  line-height: 1.5; /* Espacement entre les lignes */
+  padding-left: 10px; /* Ajoute un espacement entre le titre et le paragraphe */
+}
+
+.laser-cutting-image {
+  width: 50%; /* Image prend 50% de la largeur */
+  padding: 20px;
+}
+
+.laser-cutting-image img {
+  width: 100%; /* Garde l'image à 100% de la largeur de son conteneur */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.capacity p {
+  margin-left: 4.5rem;
+}
+
+.files p {
+  margin-left: 5.5rem;
+}
