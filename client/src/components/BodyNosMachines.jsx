@@ -1,12 +1,30 @@
 import "../style/BodyNosMachines.css";
-import "swiper/swiper-bundle.css";
-import { Swiper, SwiperSlide } from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import prcn1 from "../assets/Image/prcn1.jpg";
 import tetebystar from "../assets/Image/tetebystar.jpg";
 import tetebysprint from "../assets/Image/tetebysprint.jpg";
 import tetealfa3 from "../assets/Image/tetealfa3.jpg";
 
 function BodyNosMachines() {
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 1024 },
+      items: 1,
+    },
+    desktop: {
+      breakpoint: { max: 1024, min: 768 },
+      items: 1,
+    },
+    tablet: {
+      breakpoint: { max: 768, min: 464 },
+      items: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
   return (
     <div className="laser-cutting-container">
       {/* Conteneur pour la découpe laser */}
@@ -52,18 +70,14 @@ function BodyNosMachines() {
         </div>
 
         <div className="laser-cutting-image">
-          <Swiper
-            spaceBetween={50}
-            slidesPerView={1}
-            pagination={{ clickable: true }}
-          >
-            <SwiperSlide>
+          <Carousel responsive={responsive} infinite showDots autoPlay>
+            <div>
               <img src={tetebysprint} alt="Machine TruLaser 1" />
-            </SwiperSlide>
-            <SwiperSlide>
+            </div>
+            <div>
               <img src={tetebystar} alt="Machine TruLaser 2" />
-            </SwiperSlide>
-          </Swiper>
+            </div>
+          </Carousel>
         </div>
       </div>
 
