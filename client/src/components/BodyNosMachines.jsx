@@ -1,5 +1,10 @@
 import "../style/BodyNosMachines.css";
-import prcn from "../assets/Image/prcn.png";
+import "swiper/swiper-bundle.css";
+import { Swiper, SwiperSlide } from "react";
+import prcn1 from "../assets/Image/prcn1.jpg";
+import tetebystar from "../assets/Image/tetebystar.jpg";
+import tetebysprint from "../assets/Image/tetebysprint.jpg";
+import tetealfa3 from "../assets/Image/tetealfa3.jpg";
 
 function BodyNosMachines() {
   return (
@@ -19,14 +24,14 @@ function BodyNosMachines() {
             <div className="spec-items machines">
               <span className="spec-title">Machines</span>
               <div>
-                <p>Trumpf Truflow 3030 L20 6000W</p>
-                <p>Trumpf Truflow 3030 L20 5000W</p>
+                <p>BYSTRONIC BYSTAR 4020 4400W</p>
+                <p>BYSTRONIC BYSPRINT 3015 2200W</p>
               </div>
             </div>
 
             <div className="spec-items">
               <span className="spec-title">Dimension maximum</span>
-              <p>1 500 × 3 000 mm</p>
+              <p>2 000 × 4 000 mm</p>
             </div>
 
             <div className="spec-items capacity">
@@ -47,7 +52,18 @@ function BodyNosMachines() {
         </div>
 
         <div className="laser-cutting-image">
-          <img src={prcn} alt="Machine TruLaser" />
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+          >
+            <SwiperSlide>
+              <img src={tetebysprint} alt="Machine TruLaser 1" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={tetebystar} alt="Machine TruLaser 2" />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
 
@@ -84,7 +100,7 @@ function BodyNosMachines() {
         </div>
 
         <div className="laser-cutting-image">
-          <img src={prcn} alt="Machine 5 axes" />
+          <img src={tetealfa3} alt="Machine 5 axes" />
         </div>
       </div>
 
@@ -121,7 +137,7 @@ function BodyNosMachines() {
         </div>
 
         <div className="laser-cutting-image">
-          <img src={prcn} alt="Machine Plieuse" />
+          <img src={prcn1} alt="Machine Plieuse" />
         </div>
       </div>
     </div>

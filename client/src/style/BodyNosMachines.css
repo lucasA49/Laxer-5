@@ -7,15 +7,15 @@
 
 .laser-cutting-content {
   display: flex;
-  flex-direction: row; /* Affiche le texte et l'image sur la même ligne */
+  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start; /* Alignement en haut */
+  align-items: flex-start;
   padding: 20px;
-  background-color: #f7f7f7; /* Fond pour chaque section */
+  background-color: #f7f7f7;
 }
 
 .laser-cutting-text {
-  width: 50%; /* Texte prend 50% de la largeur */
+  width: 50%;
   padding: 20px;
 }
 
@@ -32,14 +32,14 @@
 
 .specification {
   display: flex;
-  flex-direction: column; /* Aligne les spécifications verticalement */
+  flex-direction: column;
   align-items: flex-start;
   width: 100%;
 }
 
 .spec-items {
   display: flex;
-  align-items: flex-start; /* Alignement en haut */
+  align-items: flex-start;
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #ccc;
@@ -47,35 +47,35 @@
 }
 
 .spec-items:last-child {
-  border-bottom: none; /* Supprimer la bordure du dernier élément */
+  border-bottom: none;
 }
 
 .spec-title {
   font-size: 18px;
   font-weight: bold;
-  width: 200px; /* Largeur fixe pour garantir l'alignement */
-  margin-bottom: 0; /* Pas de marge pour un meilleur alignement */
+  width: 200px;
+  margin-bottom: 0;
 }
 
 .spec-items div {
   display: flex;
-  flex-direction: column; /* Alignement vertical des paragraphes */
+  flex-direction: column;
 }
 
 .spec-items p {
   font-size: 16px;
-  margin: 0; /* Pas de marge pour un meilleur alignement */
-  line-height: 1.5; /* Espacement entre les lignes */
-  padding-left: 10px; /* Ajoute un espacement entre le titre et le paragraphe */
+  margin: 0;
+  line-height: 1.5;
+  padding-left: 10px;
 }
 
 .laser-cutting-image {
-  width: 50%; /* Image prend 50% de la largeur */
+  width: 50%;
   padding: 20px;
 }
 
 .laser-cutting-image img {
-  width: 100%; /* Garde l'image à 100% de la largeur de son conteneur */
+  width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
