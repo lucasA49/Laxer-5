@@ -5,7 +5,7 @@
   margin-bottom: 10rem;
 }
 
-.laser-cutting-content {
+.laser-cutting-content-2d {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -14,18 +14,68 @@
   background-color: #f7f7f7;
 }
 
-.laser-cutting-text {
+.laser-cutting-text-2d {
   width: 50%;
   padding: 20px;
 }
 
-.laser-cutting-text h1 {
+.laser-cutting-text-2d h1 {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.laser-cutting-text p {
+.laser-cutting-text-2d p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.laser-cutting-content-3d {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.laser-cutting-text-3d {
+  width: 50%;
+  padding: 20px;
+}
+
+.laser-cutting-text-3d h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.laser-cutting-text-3d p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.bending-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.bending-text {
+  width: 50%;
+  padding: 20px;
+}
+
+.bending-text h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.bending-text p {
   font-size: 16px;
   margin-bottom: 20px;
 }
@@ -66,25 +116,130 @@
   font-size: 16px;
   margin: 0;
   line-height: 1.5;
-  padding-left: 10px;
 }
 
-.laser-cutting-image {
+.laser-cutting-image-3d {
   width: 50%;
   padding: 20px;
 }
 
-.laser-cutting-image img {
+.laser-cutting-image-3d img {
   width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.capacity p {
+.laser-cutting-image-2d {
+  width: 50%;
+  padding: 20px;
+}
+
+.laser-cutting-image-2d img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.bending-image {
+  width: 50%;
+  padding: 20px;
+}
+
+.bending-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.capacity2d p {
   margin-left: 4.5rem;
 }
 
-.files p {
+.files2d p {
   margin-left: 5.5rem;
+}
+
+.spec-item3d p {
+  margin-right: 1rem;
+}
+
+.two-col {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Aligns items at the top of the container */
+  gap: 50px;
+  margin-top: 40px;
+}
+
+/* Left column with text content */
+.l-col {
+  flex: 1;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column; /* Allow vertical stacking */
+  justify-content: center; /* Center content vertically within the column */
+}
+
+/* Right column for image */
+.r-col {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Style for the text sections in the left column */
+.l-col h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.l-col p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Styling for the technical details section */
+.technical-details {
+  margin-top: 20px;
+  border-spacing: 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Rows inside the technical details */
+.technical-details .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+.row:last-child {
+  border-bottom: none; /* Remove the border from the last row only */
+}
+
+/* The first column in each row (titles like Machines, Dimension, etc.) */
+.technical-details .row div:first-child {
+  font-weight: bold;
+  text-align: left; /* Align left to match the reference */
+}
+
+/* The second column in each row (the details themselves) */
+.technical-details .row div:last-child {
+  text-align: left; /* Align left for the content */
+}
+
+/* Adding some padding and centering the text in the second column */
+.technical-details .row div {
+  flex: 1;
+}
+
+/* Image styling */
+.img-col img {
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
 }
