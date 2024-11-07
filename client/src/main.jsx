@@ -8,6 +8,7 @@ import MentionsLégales from "./pages/MentionsLégales";
 import App from "./App";
 import Services from "./pages/Services";
 import NosMachines from "./pages/NosMachines";
+import Spinner from "./components/Spinner";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: <Home />,
+  },
+  {
+    path: "/Chargement",
+    element: <Spinner />,
   },
 ]);
 
