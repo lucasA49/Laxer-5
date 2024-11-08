@@ -1,10 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+@font-face {
+  font-family: "Switzer-Regular";
+  src:
+    url("../assets/Fonts/Switzer-Regular.woff2") format("woff2"),
+    url("../assets/Fonts/Switzer-Regular.woff") format("woff"),
+    url("../assets/Fonts/Switzer-Regular.eot") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Switzer-Regular";
 }
 
 .services-container {
