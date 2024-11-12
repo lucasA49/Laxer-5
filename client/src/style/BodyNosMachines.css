@@ -3,124 +3,8 @@
   max-width: 1200px;
   margin-top: 20rem;
   margin-bottom: 10rem;
-}
-
-.laser-cutting-content-2d {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
-  background-color: #f7f7f7;
-}
-
-.laser-cutting-text-2d {
-  width: 50%;
-  padding: 20px;
-}
-
-.laser-cutting-text-2d h1 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.laser-cutting-text-2d p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.laser-cutting-content-3d {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
-  background-color: #f7f7f7;
-}
-
-.laser-cutting-text-3d {
-  width: 50%;
-  padding: 20px;
-}
-
-.laser-cutting-text-3d h1 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.laser-cutting-text-3d p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.bending-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
-  background-color: #f7f7f7;
-}
-
-.bending-text {
-  width: 50%;
-  padding: 20px;
-}
-
-.bending-text h1 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.bending-text p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.specification {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-}
-
-.spec-items {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ccc;
-  width: 100%;
-}
-
-.spec-items:last-child {
-  border-bottom: none;
-}
-
-.spec-title {
-  font-size: 18px;
-  font-weight: bold;
-  width: 200px;
-  margin-bottom: 0;
-}
-
-.spec-items div {
-  display: flex;
-  flex-direction: column;
-}
-
-.spec-items p {
-  font-size: 16px;
-  margin: 0;
-  line-height: 1.5;
-}
-
-.laser-cutting-image-3d {
-  width: 50%;
-  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
 }
 
 .laser-cutting-image-3d img {
@@ -133,6 +17,19 @@
 .laser-cutting-image-2d {
   width: 50%;
   padding: 20px;
+}
+
+.reverse-layout {
+  display: flex; /* Assurez-vous que le conteneur est en mode flex */
+  flex-direction: row; /* Maintient les éléments en ligne */
+}
+
+.reverse-layout .laser-cutting-image-2d {
+  order: -1; /* Positionne l'image avant le texte */
+}
+
+.reverse-layout .l-col.txt-col {
+  order: 1; /* Positionne le texte après l'image */
 }
 
 .laser-cutting-image-2d img {
@@ -172,6 +69,7 @@
   align-items: flex-start; /* Aligns items at the top of the container */
   gap: 50px;
   margin-top: 40px;
+  margin-bottom: 10rem;
 }
 
 /* Left column with text content */
@@ -180,7 +78,8 @@
   margin-right: 40px;
   display: flex;
   flex-direction: column; /* Allow vertical stacking */
-  justify-content: center; /* Center content vertically within the column */
+  justify-content: center;
+  margin: 3rem; /* Center content vertically within the column */
 }
 
 /* Right column for image */
