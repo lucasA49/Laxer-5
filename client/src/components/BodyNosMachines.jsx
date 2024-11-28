@@ -3,7 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import prcn1 from "../assets/Image/prcn1.jpg";
 import tetebystar from "../assets/Image/tetebystar.jpg";
-import tetebysprint from "../assets/Image/tetebysprint.jpg";
+import BystarInox from "../assets/Image/BystarInox.jpg";
 import Alphalaser from "../assets/Image/Alphalaser.jpg";
 import Rapido from "../assets/Image/Rapido.jpg";
 
@@ -91,7 +91,7 @@ function BodyNosMachines() {
         <div className="laser-cutting-image-2d">
           <Carousel responsive={responsive} infinite showDots autoPlay>
             <div>
-              <img src={tetebysprint} alt="Machine TruLaser 1" />
+              <img src={BystarInox} alt="Machine TruLaser 1" />
             </div>
             <div>
               <img src={tetebystar} alt="Machine TruLaser 2" />
