@@ -237,6 +237,7 @@
 .footer-info h4 {
   margin-left: 3rem;
   font-size: 2em;
+  margin-bottom: 1rem;
 }
 
 .footer-info address {
@@ -248,4 +249,14 @@
   margin-left: 3rem;
   font-weight: 600;
   color: #e60000;
+  margin-bottom: 1rem;
+}
+
+.footer-socials a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-socials a:hover {
+  color: #d10101;
 }
