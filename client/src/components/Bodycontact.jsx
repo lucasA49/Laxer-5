@@ -56,30 +56,49 @@ function BodyContact() {
   return (
     <div className="container-body">
       <div className="contact-container">
-        <div className="contact-info">
-          <h2>Nous Contacter</h2>
-          <p>Contactez-nous en remplissant le formulaire suivant.</p>
-          <ul>
-            <li>
-              <img
-                className="locationicone"
-                src={localisation}
-                alt="Icône localisation"
-              />
-              ZI de Maunit - 134 rue des Pâtis
-            </li>
-            <li className="mortagnesursevre">Mortagne-sur-Sèvre</li>
-            <li>
-              <img className="mailicone" src={mail} alt="Icône email" />
-              jp.graton@laxer5.fr
-            </li>
-            <li>
-              <img className="phoneicone" src={phone} alt="Icône téléphone" />
-              02 51 57 65 15
-            </li>
-          </ul>
-        </div>
+        {/* Section gauche : contact-info et carte */}
+        <div className="contact-left">
+          <div className="contact-info">
+            <h2>Nous Contacter</h2>
+            <p>Contactez-nous en remplissant le formulaire suivant.</p>
+            <ul>
+              <li>
+                <img
+                  className="locationicone"
+                  src={localisation}
+                  alt="Icône localisation"
+                />
+                ZI de Maunit - 134 rue des Pâtis
+              </li>
+              <li className="mortagnesursevre">Mortagne-sur-Sèvre</li>
+              <li>
+                <img className="mailicone" src={mail} alt="Icône email" />
+                jp.graton@laxer5.fr
+              </li>
+              <li>
+                <img className="phoneicone" src={phone} alt="Icône téléphone" />
+                02 51 57 65 15
+              </li>
+            </ul>
+          </div>
 
+          {/* Nouvelle section Map */}
+          <div className="contact-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3370.290067219896!2d-0.9327339232179104!3d46.98627533060736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480643263460aa87%3A0x2293ea6c16d4474b!2sLaxer%205!5e1!3m2!1sfr!2sfr!4v1733217247972!5m2!1sfr!2sfr"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Laxer 5 Location"
+            >
+              {" "}
+            </iframe>
+          </div>
+        </div>
+        {/* Section droite : formulaire */}
         <div className="contact-form">
           <h2>Contact</h2>
 
