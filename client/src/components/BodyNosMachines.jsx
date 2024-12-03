@@ -2,11 +2,11 @@ import "../style/BodyNosMachines.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import prcn1 from "../assets/Image/prcn1.jpg";
+import pièces2d from "../assets/Image/pièces2d.jpg";
 import decoupe2d from "../assets/Image/decoupe2d.jpg";
 import Alphalaser from "../assets/Image/Alphalaser.jpg";
 import Rapido from "../assets/Image/Rapido.jpg";
 import pieceplié from "../assets/Image/pieceplié.jpg";
-import pièces2d from "../assets/Image/pièces2d.jpg";
 
 function BodyNosMachines() {
   const responsive = {

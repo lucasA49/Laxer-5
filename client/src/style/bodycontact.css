@@ -1,15 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
 .container-body {
-  margin-top: 15rem;
+  margin-top: 8rem;
   height: 100vh;
 }
 
 .contact-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
   gap: 30px;
   padding: 40px;
   background-color: #f5f5f5;
@@ -19,20 +17,43 @@
   max-width: 1200px;
 }
 
-.contact-info {
-  margin-top: 16rem;
-  background-color: #fff;
+.contact-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-form {
+  flex: 1;
+  background-color: #d10101;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  min-width: 300px;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
-.contact-info:hover {
+.contact-info,
+.contact-map {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-map iframe {
+  border-radius: 10px;
+  width: 100%;
+  height: 450px;
+  border: none;
+}
+
+.contact-info:hover,
+.contact-map:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
@@ -83,7 +104,7 @@
 }
 
 .contact-form {
-  margin-top: 4rem;
+  margin-top: 0.1rem;
   background-color: #d10101;
   padding: 30px;
   border-radius: 20px;
@@ -113,7 +134,7 @@
 .contact-form input,
 .contact-form textarea,
 .contact-form button {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   padding: 15px;
   border-radius: 10px;
   border: none;
@@ -146,6 +167,7 @@
 .contact-form textarea {
   height: 150px;
   resize: none;
+  margin-bottom: 2rem;
 }
 
 .contact-form label {
@@ -161,6 +183,7 @@
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+  margin-top: 70px;
 }
 
 .contact-form button:hover {
@@ -177,6 +200,15 @@
   .contact-info,
   .contact-form {
     min-width: 100%;
+  }
+
+  .contact-left,
+  .contact-form {
+    width: 100%;
+  }
+
+  .container-body {
+    margin-bottom: 60rem;
   }
 }
 
