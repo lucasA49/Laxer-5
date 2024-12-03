@@ -2,10 +2,11 @@ import "../style/BodyNosMachines.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import prcn1 from "../assets/Image/prcn1.jpg";
-import tetebystar from "../assets/Image/tetebystar.jpg";
-import BystarInox from "../assets/Image/BystarInox.jpg";
+import pièces2d from "../assets/Image/pièces2d.jpg";
+import decoupe2d from "../assets/Image/decoupe2d.jpg";
 import Alphalaser from "../assets/Image/Alphalaser.jpg";
 import Rapido from "../assets/Image/Rapido.jpg";
+import pieceplié from "../assets/Image/pieceplié.jpg";
 
 function BodyNosMachines() {
   const responsive = {
@@ -91,10 +92,10 @@ function BodyNosMachines() {
         <div className="laser-cutting-image-2d">
           <Carousel responsive={responsive} infinite showDots autoPlay>
             <div>
-              <img src={BystarInox} alt="Machine TruLaser 1" />
+              <img src={pièces2d} alt="Machine TruLaser 1" />
             </div>
             <div>
-              <img src={tetebystar} alt="Machine TruLaser 2" />
+              <img src={decoupe2d} alt="Machine TruLaser 2" />
             </div>
           </Carousel>
         </div>
@@ -202,7 +203,7 @@ function BodyNosMachines() {
               <img src={prcn1} alt="Machine TruLaser 1" />
             </div>
             <div>
-              <img src={tetebystar} alt="Machine TruLaser 2" />
+              <img src={pieceplié} alt="Machine TruLaser 2" />
             </div>
           </Carousel>
         </div>
