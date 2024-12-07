@@ -1,17 +1,42 @@
-.laser-cutting-container {
+.body-container {
   margin: 0 auto;
   max-width: 1500px;
   margin-top: 10rem;
-  margin-bottom: 10rem;
-  background-color: #f4f4f4;
-  border-radius: 10px;
+  margin-bottom: 5rem;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  height: 170rem;
+  padding-top: 1px;
 }
 
-.laser-cutting-image-3d img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.laser3d-section {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 1200px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.bending-section {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 1200px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.laser2d-section {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 1200px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .laser-cutting-image-2d {
@@ -20,16 +45,20 @@
 }
 
 .reverse-layout {
-  display: flex; /* Assurez-vous que le conteneur est en mode flex */
-  flex-direction: row; /* Maintient les éléments en ligne */
+  display: flex;
+  /* Assurez-vous que le conteneur est en mode flex */
+  flex-direction: row;
+  /* Maintient les éléments en ligne */
 }
 
 .reverse-layout .laser-cutting-image-2d {
-  order: -1; /* Positionne l'image avant le texte */
+  order: -1;
+  /* Positionne l'image avant le texte */
 }
 
 .reverse-layout .l-col.txt-col {
-  order: 1; /* Positionne le texte après l'image */
+  order: 1;
+  /* Positionne le texte après l'image */
 }
 
 .laser-cutting-image-2d img {
@@ -37,6 +66,7 @@
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
 }
 
 .bending-image {
@@ -66,10 +96,11 @@
 .two-col {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Aligns items at the top of the container */
+  align-items: flex-start;
+  /* Aligns items at the top of the container */
   gap: 50px;
   margin-top: 40px;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 /* Left column with text content */
@@ -77,9 +108,11 @@
   flex: 1;
   margin-right: 40px;
   display: flex;
-  flex-direction: column; /* Allow vertical stacking */
+  flex-direction: column;
+  /* Allow vertical stacking */
   justify-content: center;
-  margin: 3rem; /* Center content vertically within the column */
+  margin: 3rem;
+  /* Center content vertically within the column */
 }
 
 /* Right column for image */
@@ -116,19 +149,23 @@
   padding: 20px 0;
   border-bottom: 1px solid #ccc;
 }
+
 .row:last-child {
-  border-bottom: none; /* Remove the border from the last row only */
+  border-bottom: none;
+  /* Remove the border from the last row only */
 }
 
 /* The first column in each row (titles like Machines, Dimension, etc.) */
 .technical-details .row div:first-child {
   font-weight: bold;
-  text-align: left; /* Align left to match the reference */
+  text-align: left;
+  /* Align left to match the reference */
 }
 
 /* The second column in each row (the details themselves) */
 .technical-details .row div:last-child {
-  text-align: left; /* Align left for the content */
+  text-align: left;
+  /* Align left for the content */
 }
 
 /* Adding some padding and centering the text in the second column */
