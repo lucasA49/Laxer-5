@@ -11,18 +11,15 @@ function Bodyhome() {
     <div className="bodyhome">
       <div className="header">
         <div className="text-content">
-          <h1>LAXER 5,</h1>
-          <h2>
-            <br />
-            Spécialiste
-            <span className="highlight">
-              <br />
-              Découpe laser 2D / 3D
-              <br /> Pliage de haute précision.
-            </span>
-            <br /> Près de Nantes
+          <h1 className="typewriter">LAXER 5,</h1>
+          <h2 className="typewriter delay-1">Spécialiste</h2>
+          <h2 className="typewriter delay-2">
+            <span className="highlight">Découpe laser 2D / 3D</span>
           </h2>
+          <h2 className="typewriter delay-3">Pliage de haute précision.</h2>
+          <h2 className="typewriter delay-4">Près de Nantes</h2>
         </div>
+
         <div className="header-images">
           <img className="Acceuil1" src={Acceuil1} alt="Découpe laserpliage" />
         </div>
