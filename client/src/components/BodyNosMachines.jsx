@@ -120,9 +120,9 @@ function BodyNosMachines() {
               <div className="row">
                 <div>Machines</div>
                 <div>
-                  Trumpf Truflow 3030 L20 6000W
+                  Bystronic / Bystar 4020
                   <br />
-                  Trumpf Truflow 3030 L20 5000W
+                  Bystronic / Bysprint 3015
                 </div>
               </div>
               <div className="row">
