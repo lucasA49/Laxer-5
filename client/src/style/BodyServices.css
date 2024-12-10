@@ -1,50 +1,120 @@
-.services-contener {
-  padding: 40px;
-  background-color: #f7f7f7;
-  margin-top: 7rem;
-  width: 100%;
-  position: relative;
-  box-sizing: border-box;
+.body-contener {
+  margin: 0 auto;
+  max-width: 1700px;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  height: 145.5rem;
+  padding-top: 50px;
+}
+
+.subheader {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 20px;
+  margin-left: 6.3rem;
+  margin-right: 6.3rem;
+  height: 5rem;
+  margin-top: 2.27rem;
+}
+
+.title-specifications {
+  padding-right: 138px;
+  padding-left: 9rem;
+  border-right: 1px solid #ddd;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.services-text p {
+  margin-left: 2.5rem;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .service-item {
   display: flex;
   align-items: flex-start;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 5rem;
-  margin-left: 10rem;
-  margin-right: 10rem;
-  height: 30rem;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 7rem;
+  margin-left: 6.3rem;
+  margin-right: 6.3rem;
+  height: 33rem;
+  margin-top: 2.27rem;
 }
 
 .specifications {
   padding-right: 60px;
   border-right: 1px solid #ddd;
+  font-size: 1.2rem;
 }
 
 .specifications li {
   list-style-type: none;
-  line-height: 5rem;
+  line-height: 5.5rem;
+}
+
+.animated-number {
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
 .service-text {
   flex: 1;
   margin-left: 2rem;
+  font-size: 1.2rem;
+}
+
+.service-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .service-image {
-  flex: 1;
-  text-align: center;
+  flex: 1.5; /* Permet à l'image de prendre plus d'espace */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .service-image img {
   max-width: 100%;
-  max-height: 350px;
-  object-fit: cover;
-  border-radius: 8px;
+  max-height: 100%;
+  object-fit: cover; /* Garantit que les images gardent leurs proportions */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container {
+  width: 40%; /* Largeur du carousel */
+  height: 550px; /* Hauteur fixe du carousel */
+  padding: 20px;
+  border-radius: 10px; /* Rayon de bordure du carousel */
+  overflow: hidden; /* Cache tout débordement pour garantir que le rayon soit appliqué */
+  margin: 0 auto; /* Centrer le carousel sur la page */
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%; /* Prendre toute la largeur du carousel */
+  height: 100%; /* Prendre toute la hauteur du carousel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-image img {
+  width: 100%; /* L'image prend toute la largeur disponible */
+  height: 100%; /* L'image prend toute la hauteur disponible */
+  object-fit: cover; /* Maintenir les proportions de l'image en remplissant l'espace */
+  border-radius: 10px; /* Appliquer le rayon de bordure à l'image */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre autour de l'image */
 }
 
 @media (max-width: 768px) {
