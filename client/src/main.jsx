@@ -9,43 +9,89 @@ import App from "./App";
 import Services from "./pages/Services";
 import NosMachines from "./pages/NosMachines";
 import Spinner from "./components/Spinner";
+import ScrollToTop from "./components/ScrollToTop"; // Import du composant
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: (
+      <>
+        <ScrollToTop /> {/* Ajout ici */}
+        <App />
+      </>
+    ),
   },
   {
     path: "/contact",
-    element: <Contact />,
+    element: (
+      <>
+        <ScrollToTop />
+        <Contact />
+      </>
+    ),
   },
   {
     path: "/accueil",
-    element: <Home />,
+    element: (
+      <>
+        <ScrollToTop />
+        <Home />
+      </>
+    ),
   },
   {
     path: "/entreprise",
-    element: <Company />,
+    element: (
+      <>
+        <ScrollToTop />
+        <Company />
+      </>
+    ),
   },
   {
     path: "/mentions-legales",
-    element: <MentionsLégales />,
+    element: (
+      <>
+        <ScrollToTop />
+        <MentionsLégales />
+      </>
+    ),
   },
   {
     path: "/services",
-    element: <Services />,
+    element: (
+      <>
+        <ScrollToTop />
+        <Services />
+      </>
+    ),
   },
   {
     path: "/nosmachines",
-    element: <NosMachines />,
+    element: (
+      <>
+        <ScrollToTop />
+        <NosMachines />
+      </>
+    ),
   },
   {
     path: "/admin",
-    element: <Home />,
+    element: (
+      <>
+        <ScrollToTop />
+        <Home />
+      </>
+    ),
   },
   {
     path: "/Chargement",
-    element: <Spinner />,
+    element: (
+      <>
+        <ScrollToTop />
+        <Spinner />
+      </>
+    ),
   },
 ]);
 
