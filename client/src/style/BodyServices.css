@@ -77,7 +77,7 @@
 }
 
 .service-image {
-  flex: 1.5; /* Permet à l'image de prendre plus d'espace */
+  flex: 1.5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,35 +86,37 @@
 .service-image img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: cover; /* Garantit que les images gardent leurs proportions */
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-container {
-  width: 40%; /* Largeur du carousel */
-  height: 550px; /* Hauteur fixe du carousel */
+  width: 40%;
+  height: 550px;
   padding: 20px;
-  border-radius: 10px; /* Rayon de bordure du carousel */
-  overflow: hidden; /* Cache tout débordement pour garantir que le rayon soit appliqué */
-  margin: 0 auto; /* Centrer le carousel sur la page */
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
   position: relative;
+  z-index: 100;
 }
 
 .carousel-image {
-  width: 100%; /* Prendre toute la largeur du carousel */
-  height: 100%; /* Prendre toute la hauteur du carousel */
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .carousel-image img {
-  width: 100%; /* L'image prend toute la largeur disponible */
-  height: 100%; /* L'image prend toute la hauteur disponible */
-  object-fit: cover; /* Maintenir les proportions de l'image en remplissant l'espace */
-  border-radius: 10px; /* Appliquer le rayon de bordure à l'image */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre autour de l'image */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
 }
 
 @media (max-width: 768px) {

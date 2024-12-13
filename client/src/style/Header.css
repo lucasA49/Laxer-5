@@ -31,6 +31,7 @@
   padding-top: 2vh;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
+  z-index: 1000;
 }
 
 .rounded-img {
@@ -168,17 +169,18 @@
 
 @media (max-width: 480px) {
   .Header a {
-    font-size: 1.4vh;
+    font-size: 1.8vh;
     margin-left: 0;
   }
 
   .Header {
-    padding: 0.5rem;
+    padding: 2rem;
     height: auto;
+    width: 100%;
   }
 
   .contactbtn {
     font-size: 0.8rem;
-    padding: 0.3rem 0.8rem;
+    padding: 0.5rem 1.2rem;
   }
 }
