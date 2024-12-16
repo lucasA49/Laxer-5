@@ -65,7 +65,7 @@ function BodyNosServices() {
           <div className="title-specifications">
             <p>Spécifications</p>
           </div>
-          <div className="services-text">
+          <div className="service-title">
             <p>Découpe Laser 5 Axes</p>
           </div>
         </div>
@@ -135,6 +135,9 @@ function BodyNosServices() {
               </div>
             </Carousel>
           </div>
+          <div className="title-specification-mobile">
+            <p>Spécifications</p>
+          </div>
         </div>
 
         {/* Deuxième élément */}
@@ -142,7 +145,7 @@ function BodyNosServices() {
           <div className="title-specifications">
             <p>Spécifications</p>
           </div>
-          <div className="services-text">
+          <div className="service-title">
             <p>Découpe Laser 3 Axes</p>
           </div>
         </div>
@@ -201,6 +204,9 @@ function BodyNosServices() {
               </div>
             </Carousel>
           </div>
+          <div className="title-specification-mobile">
+            <p>Spécifications</p>
+          </div>
         </div>
 
         {/* Troisième élément */}
@@ -208,7 +214,7 @@ function BodyNosServices() {
           <div className="title-specifications">
             <p>Spécifications</p>
           </div>
-          <div className="services-text">
+          <div className="service-title">
             <p>Pliage</p>
           </div>
         </div>
@@ -266,6 +272,9 @@ function BodyNosServices() {
                 </div>
               </div>
             </Carousel>
+          </div>
+          <div className="title-specification-mobile">
+            <p>Spécifications</p>
           </div>
         </div>
       </div>
