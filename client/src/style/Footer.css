@@ -60,11 +60,11 @@
   }
 
   .textfooter {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .lienmentionslegales {
-    font-size: 1rem; /* Réduit la taille de la police pour le lien */
+    font-size: 0.8rem; /* Réduit la taille de la police pour le lien */
     text-decoration: none; /* Enlève la décoration du lien */
   }
 }

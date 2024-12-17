@@ -7,6 +7,8 @@ import decoupe2d from "../assets/Image/decoupe2d.jpg";
 import Alphalaser from "../assets/Image/Alphalaser.jpg";
 import Rapido from "../assets/Image/Rapido.jpg";
 import pieceplié from "../assets/Image/pieceplié.jpg";
+import ChariotsDroite from "../assets/Image/ChariotsDroite.jpg";
+import ChariotsGauche from "../assets/Image/ChariotsGauche.jpg";
 
 function BodyNosMachines() {
   const responsive = {
@@ -107,7 +109,7 @@ function BodyNosMachines() {
             <h3 className="ttl_2 slices-in text-cut-up">
               Tables de découpe Laser
             </h3>
-            <div>à commande numérique</div>
+            <p>à commande numérique</p>
             <p>
               C'est un travail de haute précision, une puissance élevée et une
               qualité de coupe sans équivalent.
@@ -157,7 +159,7 @@ function BodyNosMachines() {
         <div className="two-col equipment flex justify-evenly align-center mt-5">
           <div className="l-col txt-col">
             <h3 className="ttl_2 slices-in text-cut-up">Pliage</h3>
-            <div>à commande numérique</div>
+            <p>à commande numérique</p>
             <p>
               C'est un travail de haute précision, une puissance élevée et une
               qualité de coupe sans équivalent.
@@ -205,7 +207,7 @@ function BodyNosMachines() {
               </div>
             </div>
           </div>
-          <div className="laser-cutting-image-2d">
+          <div className="bending-image-2d">
             <Carousel responsive={responsive} infinite showDots autoPlay>
               <div>
                 <img src={prcn1} alt="Machine TruLaser 1" />
@@ -214,6 +216,61 @@ function BodyNosMachines() {
                 <img src={pieceplié} alt="Machine TruLaser 2" />
               </div>
             </Carousel>
+          </div>
+        </div>
+      </div>
+      {/* Conteneur global pour la découpe laser à plat avec disposition inversée */}
+      <div className="manutention-section">
+        <div className="two-col equipment flex justify-evenly align-center mt-5 reverse-layout">
+          <div className="manutention-image-2d">
+            <Carousel responsive={responsive} infinite showDots autoPlay>
+              <div>
+                <img src={ChariotsDroite} alt="Chariots 1" />
+              </div>
+              <div>
+                <img src={ChariotsGauche} alt="Chariots 2" />
+              </div>
+            </Carousel>
+          </div>
+          <div className="l-col txt-col">
+            <h3 className="ttl_2 slices-in text-cut-up">
+              Matériel de Manutention et de Levage
+            </h3>
+            <p>Nos Chariots et Pont roulant</p>
+            <p>Un ensemble complet parfait pour la manutention et le levage</p>
+            <div className="technical-details mt-2">
+              <div className="row">
+                <div>Matériels</div>
+                <div>
+                  Chariot STILL RX60-35
+                  <br />
+                  Chariot MANITOU
+                  <br />
+                  FENWICK-LINDE L10
+                </div>
+              </div>
+              <div className="row">
+                <div>
+                  Charges <br /> maximales <br /> Chariots
+                </div>
+                <div>
+                  3 500 kg
+                  <br />
+                  1 500 kg
+                  <br />1 000 kg
+                </div>
+              </div>
+              <div className="row">
+                <div>
+                  Charges
+                  <br />
+                  Maximal
+                  <br />
+                  Pont Roulant
+                </div>
+                <div>1 500 kg</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
