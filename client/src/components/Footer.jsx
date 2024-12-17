@@ -5,10 +5,9 @@ import logo from "../assets/logo/logo.png";
 function Footer() {
   return (
     <footer className="footer">
+      <img className="logofooter" src={logo} alt="Logo" />
       <div className="footer-content">
-        <img className="logofooter" src={logo} alt="Logo" />
-        <p className=" textfooter">
-          {" "}
+        <p className="textfooter">
           Copyright © 2024 Laxer 5 | Tous droits réservés. Voir les{" "}
           <Link className="lienmentionslegales" to="/mentions-legales">
             mentions légales
