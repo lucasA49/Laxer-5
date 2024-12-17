@@ -27,12 +27,14 @@
   border-right: 1px solid #ddd;
   font-size: 2rem;
   font-weight: bold;
+  color: #0078d7;
 }
 
 .service-title {
   margin-left: 2.5rem;
   font-size: 2rem;
   font-weight: bold;
+  color: #0078d7;
 }
 
 .services-text p {
@@ -66,6 +68,10 @@
   line-height: 5.5rem;
 }
 
+.title-specification-mobile {
+  display: none;
+}
+
 .animated-number {
   font-weight: bold;
   font-size: 1.3rem;
@@ -95,6 +101,7 @@
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 0;
 }
 
 .carousel-container {
@@ -127,7 +134,7 @@
 
 @media (max-width: 768px) {
   .body-contener {
-    margin-top: 10rem;
+    margin-top: 6rem;
     margin-bottom: 2rem;
     height: auto;
   }
@@ -139,25 +146,23 @@
     padding: 20px;
     margin: 1rem 0;
     height: auto;
-    box-shadow: none;
-    background-color: transparent;
   }
 
-  /* Réorganiser les éléments dans l'ordre souhaité */
   .subheader {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     background-color: white;
     border-radius: 20px;
     height: 5rem;
-    margin-top: 2.27rem;
     display: flex;
     justify-content: center;
     margin-left: 1rem;
     margin-right: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   .title-specification-mobile {
-    order: 2;
+    order: 3;
     font-size: 2rem;
     font-weight: bold;
     display: flex;
@@ -166,19 +171,14 @@
     background-color: white;
     border-radius: 20px;
     height: 5rem;
-    margin-top: 2.27rem;
     padding: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   .service-title {
     order: 1;
-    display: flex;
-    align-items: center;
-  }
-
-  .service-title {
-    order: 1;
-    /* Place "Service Title" en haut */
+    margin-left: 0rem;
     font-size: 1.8rem;
     font-weight: bold;
     text-align: center;
@@ -186,7 +186,6 @@
 
   .service-text {
     order: 2;
-    /* Place "Service Text" entre les deux */
     font-size: 1.2rem;
     text-align: center;
     margin-bottom: 1rem;
@@ -232,5 +231,12 @@
 
   .animated-number {
     font-size: 1.2rem;
+    text-align: left;
+    display: inline-block;
+  }
+
+  .specifications li {
+    text-align: left;
+    line-height: 4rem;
   }
 }
