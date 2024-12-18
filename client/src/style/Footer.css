@@ -38,6 +38,10 @@
   font-weight: bold;
 }
 
+.lienmentionslegales:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .footer {
     height: auto; /* Ajuste la hauteur pour les petits écrans */
@@ -66,5 +70,9 @@
   .lienmentionslegales {
     font-size: 0.8rem; /* Réduit la taille de la police pour le lien */
     text-decoration: none; /* Enlève la décoration du lien */
+  }
+
+  .lienmentionslegales:hover {
+    text-decoration: underline;
   }
 }
