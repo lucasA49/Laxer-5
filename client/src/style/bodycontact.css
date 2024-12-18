@@ -2,7 +2,7 @@
 
 .container-body {
   margin-top: 8rem;
-  height: 100vh;
+  height: 60rem;
   margin-bottom: 2rem;
 }
 
@@ -44,6 +44,10 @@
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
+}
+
+.contact-info {
+  height: 20rem;
 }
 
 .contact-map iframe {
@@ -192,30 +196,10 @@
   color: white;
 }
 
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .contact-info,
-  .contact-form {
-    min-width: 100%;
-  }
-
-  .contact-left,
-  .contact-form {
-    width: 100%;
-  }
-
-  .container-body {
-    margin-bottom: 60rem;
-  }
-}
-
 .mortagnesursevre {
   margin-left: 1.8rem;
 }
+
 .mailicone {
   height: 1.6rem;
 }
@@ -251,4 +235,111 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* Mode Desktop (écrans > 1024px) */
+@media screen and (min-width: 1024px) {
+  .contact-container {
+    flex-direction: row; /* Garde la disposition en ligne sur desktop */
+  }
+
+  .contact-info,
+  .contact-form,
+  .contact-map {
+    width: 100%;
+    flex: 1;
+  }
+}
+
+/* Mode tablette (écrans < 1024px) */
+@media screen and (max-width: 1024px) {
+  .contact-container {
+    flex-direction: column; /* Passer en colonne sur tablettes */
+    gap: 20px;
+  }
+
+  .contact-info,
+  .contact-form {
+    min-width: 100%;
+  }
+
+  .contact-left,
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-info {
+    order: 1;
+  }
+
+  .contact-form {
+    order: 2;
+  }
+
+  .contact-map {
+    order: 3;
+  }
+}
+
+/* Mode mobile (écrans < 768px) */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Passer en colonne sur mobile */
+    gap: 20px;
+  }
+
+  .contact-info,
+  .contact-form {
+    min-width: 100%;
+  }
+
+  .contact-left,
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-info {
+    order: 1; /* Contact-info en premier */
+  }
+
+  .contact-form {
+    order: 2; /* Contact-form en deuxième */
+  }
+
+  .contact-map {
+    order: 3; /* Contact-map en dernier */
+  }
+
+  .container-body {
+    margin-bottom: 50rem;
+  }
+}
+
+/* Mode mobile très petit (écrans < 480px) */
+@media screen and (max-width: 480px) {
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-info,
+  .contact-form,
+  .contact-map {
+    position: relative;
+    display: block;
+  }
+
+  .contact-info {
+    order: 1;
+  }
+
+  .contact-form {
+    order: 2;
+  }
+
+  .contact-map {
+    order: 3;
+  }
 }

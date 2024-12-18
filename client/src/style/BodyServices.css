@@ -15,10 +15,9 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   background-color: white;
   border-radius: 20px;
-  margin-left: 6.3rem;
-  margin-right: 6.3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   height: 5rem;
-  margin-top: 2.27rem;
 }
 
 .title-specifications {
@@ -51,8 +50,8 @@
   border-radius: 20px;
   padding: 40px;
   margin-bottom: 7rem;
-  margin-left: 6.3rem;
-  margin-right: 6.3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   height: 33rem;
   margin-top: 2.27rem;
 }
@@ -105,9 +104,8 @@
 }
 
 .carousel-container {
-  width: 40%;
+  width: 35%;
   height: 550px;
-  padding: 20px;
   border-radius: 10px;
   overflow: hidden;
   margin: 0 auto;
@@ -130,6 +128,107 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 100;
+}
+
+@media screen and (max-width: 1024px) {
+  .body-contener {
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    height: auto;
+  }
+
+  .service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 1rem 0;
+    height: auto;
+  }
+
+  .subheader {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 20px;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .title-specification-mobile {
+    order: 3;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 20px;
+    height: 5rem;
+    padding: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .service-title {
+    order: 1;
+    margin-left: 0rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .carousel-container {
+    order: 2;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .carousel-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .service-text {
+    order: 3;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  .specifications {
+    order: 5;
+    border-right: none;
+    padding: 0;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .title-specifications {
+    display: none;
+  }
+
+  .specifications li {
+    line-height: 2rem;
+    text-align: left;
+  }
+
+  .animated-number {
+    font-size: 1.2rem;
+    text-align: left;
+    display: inline-block;
+    text-align: left;
+  }
+
+  .specifications li {
+    text-align: left;
+    line-height: 4rem;
+  }
 }
 
 @media (max-width: 768px) {
