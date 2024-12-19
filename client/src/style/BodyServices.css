@@ -52,7 +52,7 @@
   margin-bottom: 7rem;
   margin-left: 2rem;
   margin-right: 2rem;
-  height: 33rem;
+  height: 27.5rem;
   margin-top: 2.27rem;
 }
 
@@ -64,7 +64,7 @@
 
 .specifications li {
   list-style-type: none;
-  line-height: 5.5rem;
+  line-height: 4.5rem;
 }
 
 .title-specification-mobile {
@@ -80,6 +80,7 @@
   flex: 1;
   margin-left: 2rem;
   font-size: 1.2rem;
+  margin-right: 2rem;
 }
 
 .service-text h2 {
@@ -105,7 +106,7 @@
 
 .carousel-container {
   width: 35%;
-  height: 550px;
+  height: 350px;
   border-radius: 10px;
   overflow: hidden;
   margin: 0 auto;

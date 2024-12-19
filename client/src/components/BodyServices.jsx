@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import "../style/BodyServices.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useMediaQuery } from "react-responsive";
 import bystarinox from "../assets/Image/BystarInox.jpg";
 import pieceplié2 from "../assets/Image/pieceplié2.jpg";
 import pieceplié3 from "../assets/Image/pieceplié3.jpg";
@@ -44,6 +45,8 @@ AnimatedNumber.propTypes = {
 };
 
 function BodyNosServices() {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1024 },
@@ -115,7 +118,14 @@ function BodyNosServices() {
             </p>
           </div>
           <div className="carousel-container">
-            <Carousel responsive={responsive} infinite showDots autoPlay>
+            <Carousel
+              responsive={responsive}
+              infinite
+              showDots={false}
+              autoPlay
+              arrows={!isMobile}
+              swipeable
+            >
               <div>
                 <div className="carousel-image">
                   <img src={tetealfa1} alt="Découpe laser avec tête Alfa" />
@@ -195,7 +205,14 @@ function BodyNosServices() {
             </p>
           </div>
           <div className="carousel-container">
-            <Carousel responsive={responsive} infinite showDots autoPlay>
+            <Carousel
+              responsive={responsive}
+              infinite
+              showDots={false}
+              autoPlay
+              arrows={!isMobile}
+              swipeable
+            >
               <div>
                 <div className="carousel-image">
                   <img src={bystarinox} alt="Panneau en acier découpé" />
