@@ -235,6 +235,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .react-multi-carousel-arrow {
+    display: none !important;
+  }
+
   .reverse-layout {
     flex-direction: column;
     /* Empile les éléments verticalement */
