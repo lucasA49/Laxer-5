@@ -3,9 +3,14 @@ import PropTypes from "prop-types";
 import "../style/BodyServices.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useMediaQuery } from "react-responsive";
 import bystarinox from "../assets/Image/BystarInox.jpg";
-import prcn1 from "../assets/Image/prcn1.jpg";
-import pieceplié from "../assets/Image/pieceplié.jpg";
+import pieceplié2 from "../assets/Image/pieceplié2.jpg";
+import pieceplié3 from "../assets/Image/pieceplié3.jpg";
+import pieceplié4 from "../assets/Image/pieceplié4.jpg";
+import pieceplié5 from "../assets/Image/pieceplié5.jpg";
+import pieceplié6 from "../assets/Image/pieceplié6.jpg";
+import pieceplié7 from "../assets/Image/pieceplié7.jpg";
 import tetealfa1 from "../assets/Image/tetealfa1.jpg";
 import tetealfa2 from "../assets/Image/tetealfa2.jpg";
 import tetealfa3 from "../assets/Image/tetealfa3.jpg";
@@ -40,6 +45,8 @@ AnimatedNumber.propTypes = {
 };
 
 function BodyNosServices() {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1024 },
@@ -111,7 +118,14 @@ function BodyNosServices() {
             </p>
           </div>
           <div className="carousel-container">
-            <Carousel responsive={responsive} infinite showDots autoPlay>
+            <Carousel
+              responsive={responsive}
+              infinite
+              showDots={false}
+              autoPlay
+              arrows={!isMobile}
+              swipeable
+            >
               <div>
                 <div className="carousel-image">
                   <img src={tetealfa1} alt="Découpe laser avec tête Alfa" />
@@ -191,7 +205,14 @@ function BodyNosServices() {
             </p>
           </div>
           <div className="carousel-container">
-            <Carousel responsive={responsive} infinite showDots autoPlay>
+            <Carousel
+              responsive={responsive}
+              infinite
+              showDots={false}
+              autoPlay
+              arrows={!isMobile}
+              swipeable
+            >
               <div>
                 <div className="carousel-image">
                   <img src={bystarinox} alt="Panneau en acier découpé" />
@@ -263,12 +284,32 @@ function BodyNosServices() {
             <Carousel responsive={responsive} infinite showDots autoPlay>
               <div>
                 <div className="carousel-image">
-                  <img src={pieceplié} alt="Pièce pliée avec précision" />
+                  <img src={pieceplié2} alt="Pièce pliée avec précision" />
                 </div>
               </div>
               <div>
                 <div className="carousel-image">
-                  <img src={prcn1} alt="Résultat final d'une pièce pliée" />
+                  <img src={pieceplié3} alt="Pièce pliée avec précision" />
+                </div>
+              </div>
+              <div>
+                <div className="carousel-image">
+                  <img src={pieceplié4} alt="Pièce pliée avec précision" />
+                </div>
+              </div>
+              <div>
+                <div className="carousel-image">
+                  <img src={pieceplié5} alt="Pièce pliée avec précision" />
+                </div>
+              </div>
+              <div>
+                <div className="carousel-image">
+                  <img src={pieceplié6} alt="Pièce pliée avec précision" />
+                </div>
+              </div>
+              <div>
+                <div className="carousel-image">
+                  <img src={pieceplié7} alt="Pièce pliée avec précision" />
                 </div>
               </div>
             </Carousel>

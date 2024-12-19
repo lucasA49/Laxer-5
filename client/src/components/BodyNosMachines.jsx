@@ -1,16 +1,21 @@
 import "../style/BodyNosMachines.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useMediaQuery } from "react-responsive";
 import prcn1 from "../assets/Image/prcn1.jpg";
 import pièces2d from "../assets/Image/pièces2d.jpg";
 import decoupe2d from "../assets/Image/decoupe2d.jpg";
-import Alphalaser from "../assets/Image/Alphalaser.jpg";
+import AlphaOpen from "../assets/Image/AlphaOpen.jpg";
+import AlphaClosed from "../assets/Image/AlphaClosed.jpg";
 import Rapido from "../assets/Image/Rapido.jpg";
 import pieceplié from "../assets/Image/pieceplié.jpg";
 import ChariotsDroite from "../assets/Image/ChariotsDroite.jpg";
 import ChariotsGauche from "../assets/Image/ChariotsGauche.jpg";
+import Bureau from "../assets/Image/Bureau.jpg";
 
 function BodyNosMachines() {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1024 },
@@ -71,7 +76,9 @@ function BodyNosMachines() {
                 </div>
               </div>
               <div className="row">
-                <div>Fichiers nécessaires</div>
+                <div>
+                  Fichiers <br /> nécessaires
+                </div>
                 <div>
                   DXF, DWG, STEP ou autres supports : de la pièce unitaire à la
                   grande série.
@@ -80,12 +87,22 @@ function BodyNosMachines() {
             </div>
           </div>
           <div className="laser-cutting-image-2d">
-            <Carousel responsive={responsive} infinite showDots autoPlay>
+            <Carousel
+              responsive={responsive}
+              infinite
+              showDots={false}
+              autoPlay
+              arrows={!isMobile}
+              swipeable
+            >
               <div>
                 <img src={Rapido} alt="Machine TruLaser 1" />
               </div>
               <div>
-                <img src={Alphalaser} alt="Machine TruLaser 2" />
+                <img src={AlphaOpen} alt="Machine TruLaser 2" />
+              </div>
+              <div>
+                <img src={AlphaClosed} alt="Machine TruLaser 2" />
               </div>
             </Carousel>
           </div>
@@ -96,7 +113,14 @@ function BodyNosMachines() {
       <div className="laser2d-section">
         <div className="two-col equipment flex justify-evenly align-center mt-5 reverse-layout">
           <div className="laser-cutting-image-2d">
-            <Carousel responsive={responsive} infinite showDots autoPlay>
+            <Carousel
+              responsive={responsive}
+              infinite
+              showDots={false}
+              autoPlay
+              arrows={!isMobile}
+              swipeable
+            >
               <div>
                 <img src={pièces2d} alt="Machine TruLaser 1" />
               </div>
@@ -143,7 +167,9 @@ function BodyNosMachines() {
                 </div>
               </div>
               <div className="row">
-                <div>Fichiers nécessaires</div>
+                <div>
+                  Fichiers <br /> nécessaires
+                </div>
                 <div>
                   DXF, DWG, STEP ou autres supports : de la pièce unitaire à la
                   petite série.
@@ -154,7 +180,7 @@ function BodyNosMachines() {
         </div>
       </div>
 
-      {/* Conteneur global pour la découpe laser à plat */}
+      {/* Conteneur global pour le pliage */}
       <div className="bending-section">
         <div className="two-col equipment flex justify-evenly align-center mt-5">
           <div className="l-col txt-col">
@@ -199,7 +225,9 @@ function BodyNosMachines() {
                 </div>
               </div>
               <div className="row">
-                <div>Fichiers nécessaires</div>
+                <div>
+                  Fichiers <br /> nécessaires
+                </div>
                 <div>
                   DXF, DWG, STEP ou autres supports : de la pièce unitaire à la
                   petite série.
@@ -207,8 +235,15 @@ function BodyNosMachines() {
               </div>
             </div>
           </div>
-          <div className="bending-image-2d">
-            <Carousel responsive={responsive} infinite showDots autoPlay>
+          <div className="bending-image">
+            <Carousel
+              responsive={responsive}
+              infinite
+              showDots={false}
+              autoPlay
+              arrows={!isMobile}
+              swipeable
+            >
               <div>
                 <img src={prcn1} alt="Machine TruLaser 1" />
               </div>
@@ -219,11 +254,18 @@ function BodyNosMachines() {
           </div>
         </div>
       </div>
-      {/* Conteneur global pour la découpe laser à plat avec disposition inversée */}
+      {/* Conteneur global pour la manutention avec disposition inversée */}
       <div className="manutention-section">
         <div className="two-col equipment flex justify-evenly align-center mt-5 reverse-layout">
-          <div className="manutention-image-2d">
-            <Carousel responsive={responsive} infinite showDots autoPlay>
+          <div className="manutention-image">
+            <Carousel
+              responsive={responsive}
+              infinite
+              showDots={false}
+              autoPlay
+              arrows={!isMobile}
+              swipeable
+            >
               <div>
                 <img src={ChariotsDroite} alt="Chariots 1" />
               </div>
@@ -270,6 +312,56 @@ function BodyNosMachines() {
                 </div>
                 <div>1 500 kg</div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Conteneur global pour la programmation */}
+      <div className="prog-section">
+        <div className="two-col equipment flex justify-evenly align-center mt-5">
+          <div className="l-col txt-col">
+            <h3 className="ttl_2 slices-in text-cut-up">
+              Programmation 2D / 3D
+            </h3>
+            <p>Sur logiciel de CAO</p>
+            <p>
+              C'est un travail de haute précision, une puissance élevée et une
+              qualité de coupe sans équivalent.
+              <br />
+              <br />
+              Un ensemble complet parfait pour la production de vos pièces
+              coupées au laser avec les meilleurs arrêts réalisables.
+            </p>
+            <div className="technical-details mt-2">
+              <div className="row">
+                <div>Logiciels</div>
+                <div>
+                  Tebis
+                  <br />
+                  Bysoft
+                </div>
+              </div>
+              <div className="row">
+                <div>Usage</div>
+                <div>
+                  {" "}
+                  3D
+                  <br />
+                  2D
+                </div>
+              </div>
+              <div className="row">
+                <div>
+                  Fichiers <br /> nécessaires
+                </div>
+                <div>DXF, DWG, STEP, IGES ou autres supports</div>
+              </div>
+            </div>
+          </div>
+          <div className="Prog-image">
+            <div>
+              <img src={Bureau} alt="Machine TruLaser 1" />
             </div>
           </div>
         </div>
