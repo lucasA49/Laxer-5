@@ -1,3 +1,4 @@
+/* Styles globaux (Desktop par défaut) */
 @font-face {
   font-family: "Switzer-Regular";
   src:
@@ -33,33 +34,33 @@
 
 .text-content h1,
 .text-content h2 {
-  overflow: hidden; /* Cache le texte au départ */
-  white-space: nowrap; /* Empêche les retours à la ligne */
+  overflow: hidden;
+  white-space: nowrap;
   display: inline-block;
-  text-align: left; /* Assure que le texte reste aligné à gauche */
+  text-align: left;
 }
 
 .text-content .typewriter {
-  animation: typewriter 0.4s steps(20, end) forwards; /* Animation rapide */
-  border-right: none; /* Pas de curseur clignotant */
-  width: 0; /* Le texte commence masqué */
-  display: block; /* Force les lignes à prendre toute la largeur disponible */
+  animation: typewriter 0.4s steps(20, end) forwards;
+  border-right: none;
+  width: 0;
+  display: block;
 }
 
 .text-content .delay-1 {
-  animation-delay: 0.5s; /* Légère pause après la première ligne */
+  animation-delay: 0.5s;
 }
 
 .text-content .delay-2 {
-  animation-delay: 1s; /* Délais ajusté pour un effet fluide */
+  animation-delay: 1s;
 }
 
 .text-content .delay-3 {
-  animation-delay: 1.5s; /* Délais ajusté pour un effet fluide */
+  animation-delay: 1.5s;
 }
 
 .text-content .delay-4 {
-  animation-delay: 2s; /* Délais ajusté pour un effet fluide */
+  animation-delay: 2s;
 }
 
 .text-content .highlight {
@@ -95,11 +96,6 @@
   margin-bottom: 1rem;
 }
 
-.header .highlight {
-  color: #d10101;
-  font-weight: bold;
-}
-
 .header-images {
   display: flex;
   justify-content: flex-end;
@@ -111,7 +107,7 @@
   border-radius: 8px;
   margin-top: 10rem;
   margin-right: 8rem;
-  margin-bottom: 4rem;
+  margin-bottom: 10rem;
 }
 
 .scrolldown {
@@ -199,36 +195,108 @@
   color: white;
 }
 
-.service-card.laser .service-content {
-  background-color: rgba(0, 0, 0, 0.7);
+@media screen and (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header h1 {
+    font-size: 3rem;
+    margin: 1rem;
+  }
+
+  .header h2 {
+    font-size: 2rem;
+    margin: 1rem;
+  }
+
+  .header-images img {
+    max-width: 80%;
+  }
+
+  .service-card {
+    flex-direction: column;
+    margin: 2rem 1rem;
+    height: auto;
+  }
+
+  .service-card img {
+    width: 100%;
+  }
+
+  .service-content {
+    padding: 15px;
+    width: 100%;
+  }
 }
 
-.service-card.laser nav a {
-  color: #000;
-}
+/* Mobile (écrans < 768px) */
+@media screen and (max-width: 768px) {
+  .text-content h1,
+  .text-content h2 {
+    overflow: visible;
+  }
 
-.service-card.pliage .service-content {
-  background-color: #e6f0f5;
-  color: black;
-}
+  .header h1 {
+    font-size: 2.5rem;
+    margin-left: -3rem;
+    margin-top: 3rem;
+  }
 
-.service-card.pliage img {
-  height: 45rem;
-}
+  .header h2 {
+    font-size: 1.8rem;
+    margin-left: -3rem;
+  }
 
-.service-card.laser3d img {
-  height: 30rem;
-}
+  .header-images img {
+    max-width: 100%;
+    margin: 0rem;
+    padding-left: 1rem;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+  }
 
-.service-card.pliage nav {
-  background-color: black;
-  color: white;
-}
+  .services-title {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+  }
 
-.service-card.pliage nav a {
-  color: #fff;
-}
+  .service-card {
+    margin: 1rem 0;
+    flex-direction: column;
+    height: auto;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
 
-.service-card.pliage nav:hover {
-  background-color: #444; /* Change background color on hover */
+  .service-card img {
+    width: 100%;
+    order: -1;
+    /* Place l'image en haut */
+  }
+
+  .service-content {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    /* Centre le texte */
+  }
+
+  .service-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .service-content p {
+    font-size: 0.9rem;
+  }
+
+  .service-content nav {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    margin: 0 auto;
+    /* Centre le bouton */
+  }
 }
