@@ -20,7 +20,7 @@ function Bodycompany() {
         <div className="right-side">
           <h1>LAXER 5</h1>
           <h2>Spécialiste en usinage laser 2D, 3D et pliage en Vendée</h2>
-          <h3>Petite, moyenne et grande série</h3>
+          <h3>Prototypes, Petite, moyenne et grande série</h3>
           <p>
             LAXER 5 est une entreprise spécialisée dans la découpe et le pliage
             de métaux, offrant des solutions sur mesure en tôlerie et découpe 3D
@@ -125,7 +125,6 @@ function Bodycompany() {
 
       {/* Footer */}
       <footer className="footer2">
-        <div className="footer-background">hi</div>
         <div className="footer-content2">
           <div className="footer-info">
             <h4>LAXER 5</h4>
