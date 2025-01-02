@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
-
 .container-body {
   margin-top: 8rem;
   height: 60rem;
@@ -178,6 +176,36 @@
 .contact-form label {
   color: white;
   margin-bottom: 10px;
+}
+
+#file {
+  margin-bottom: 40px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.1rem;
+  max-width: 100%;
+  color: #000000;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.288);
+}
+
+#file::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.288);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #000000;
+  cursor: pointer;
+}
+
+#file::file-selector-button:hover {
+  background-color: #d10101;
+  color: white;
 }
 
 .contact-form button {
