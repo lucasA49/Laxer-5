@@ -2,15 +2,19 @@ import "../style/BodyNosMachines.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useMediaQuery } from "react-responsive";
-import prcn1 from "../assets/Image/prcn1.jpg";
-import pièces2d from "../assets/Image/pièces2d.jpg";
-import decoupe2d from "../assets/Image/decoupe2d.jpg";
+import BysPrintExt from "../assets/Image/BysPrintExt.jpg";
+import BysPrintExt2 from "../assets/Image/BysPrintExt2.jpg";
+import BysPrintFront from "../assets/Image/BysPrintFront.jpg";
+import BystarExt from "../assets/Image/BystarExt.jpg";
 import AlphaOpen from "../assets/Image/AlphaOpen.jpg";
 import AlphaClosed from "../assets/Image/AlphaClosed.jpg";
 import Rapido from "../assets/Image/Rapido.jpg";
-import pieceplié from "../assets/Image/pieceplié.jpg";
+import prcn1 from "../assets/Image/prcn1.jpg";
+import ErmackExt from "../assets/Image/ErmackExt.jpg";
+import ErmackInt from "../assets/Image/ErmackInt.jpg";
 import ChariotsDroite from "../assets/Image/ChariotsDroite.jpg";
 import ChariotsGauche from "../assets/Image/ChariotsGauche.jpg";
+import PontRoulant from "../assets/Image/PontRoulant.jpg";
 import Bureau from "../assets/Image/Bureau.jpg";
 
 function BodyNosMachines() {
@@ -122,10 +126,14 @@ function BodyNosMachines() {
               swipeable
             >
               <div>
-                <img src={pièces2d} alt="Machine TruLaser 1" />
+                <img src={BystarExt} alt="Machine TruLaser 1" />
+              </div>
+              <img src={BysPrintFront} alt="Machine TruLaser 2" />
+              <div>
+                <img src={BysPrintExt} alt="Machine TruLaser 2" />
               </div>
               <div>
-                <img src={decoupe2d} alt="Machine TruLaser 2" />
+                <img src={BysPrintExt2} alt="Machine TruLaser 2" />
               </div>
             </Carousel>
           </div>
@@ -248,7 +256,10 @@ function BodyNosMachines() {
                 <img src={prcn1} alt="Machine TruLaser 1" />
               </div>
               <div>
-                <img src={pieceplié} alt="Machine TruLaser 2" />
+                <img src={ErmackExt} alt="Machine TruLaser 2" />
+              </div>
+              <div>
+                <img src={ErmackInt} alt="Machine TruLaser 2" />
               </div>
             </Carousel>
           </div>
@@ -271,6 +282,9 @@ function BodyNosMachines() {
               </div>
               <div>
                 <img src={ChariotsGauche} alt="Chariots 2" />
+              </div>
+              <div>
+                <img src={PontRoulant} alt="Chariots 2" />
               </div>
             </Carousel>
           </div>
