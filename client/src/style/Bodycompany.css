@@ -1,6 +1,6 @@
 .body-entreprise {
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #fff;
   color: #333;
   margin-top: 5rem;
   overflow: hidden;
@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: #f4f4f4;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
@@ -48,6 +48,7 @@
   color: #e60000;
   font-size: 2.5em;
   margin-top: 2rem;
+  font-family: "Raleway", sans-serif;
 }
 
 .right-side h2 {
@@ -69,6 +70,7 @@
 }
 
 .cta-button {
+  font-family: "Raleway", sans-serif;
   background-color: #333;
   color: #fff;
   border-radius: 20px;
@@ -124,6 +126,7 @@
 
 /* Style for Each Button */
 .header-button {
+  font-family: "Raleway", sans-serif;
   background-color: #9a9a9a;
   color: black;
   padding: 15px 30px;
@@ -147,6 +150,7 @@
 }
 
 .timeline-section h2 {
+  font-family: "Raleway", sans-serif;
   color: #333;
   font-size: 2.5em;
   margin-bottom: 20px;
@@ -174,6 +178,7 @@
 }
 
 .timeline-year {
+  font-family: "Raleway", sans-serif;
   position: absolute;
   left: -80px;
   top: 50%;
@@ -193,96 +198,6 @@
   color: #555;
   font-size: 1em;
   line-height: 1.6;
-}
-
-.footer2 {
-  position: relative;
-  padding: 60px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #d9d9d9;
-  width: calc(100% + 8rem);
-  overflow: hidden;
-  left: 50%;
-  transform: translateX(-50%) rotate(3deg);
-  min-height: 22rem;
-  margin-left: -1rem;
-  margin-right: -8rem;
-  margin-bottom: -4.2rem;
-}
-
-.footer-content2 {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  transform: rotate(-3deg);
-  margin-left: 5rem;
-  margin-bottom: 2rem;
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  margin-top: 2.5rem;
-}
-
-.footer-links a {
-  font-size: 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-decoration: none;
-  color: black;
-  margin-right: 18rem;
-}
-
-.footer-socials {
-  margin-right: 3rem;
-}
-
-.footer-socials h4 {
-  margin-right: 3rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.footer-links a:hover {
-  color: #d10101;
-}
-
-.footer-info h4 {
-  margin-left: 3rem;
-  font-size: 2em;
-  margin-bottom: 1rem;
-}
-
-.footer-info address {
-  margin-left: 3rem;
-  font-weight: 500;
-}
-
-.footer-info p {
-  margin-left: 3rem;
-  font-weight: 600;
-  color: #e60000;
-  margin-bottom: 1rem;
-}
-
-.footer-socials a {
-  text-decoration: none;
-  color: black;
-}
-
-.footer-socials a:hover {
-  color: #d10101;
-}
-
-.footer-socials {
-  text-decoration: none !important;
 }
 
 /* Styles pour les écrans de tablettes (entre 768px et 1024px) */

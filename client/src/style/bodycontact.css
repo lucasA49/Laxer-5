@@ -65,6 +65,7 @@
   color: #d10101;
   margin-bottom: 20px;
   font-size: 1.8rem;
+  font-family: "Raleway", sans-serif;
 }
 
 .contact-info p,
@@ -127,6 +128,7 @@
   color: white;
   margin-bottom: 20px;
   font-size: 1.8rem;
+  font-family: "Raleway", sans-serif;
 }
 
 .contact-form form {
@@ -209,6 +211,7 @@
 }
 
 .contact-form button {
+  font-family: "Raleway", sans-serif;
   background-color: #fff;
   color: #d10101;
   font-weight: bold;

@@ -20,24 +20,26 @@
   height: 5rem;
 }
 
-.title-specifications {
-  padding-right: 138px;
+.title-specifications p {
+  padding-right: 118px;
   padding-left: 9rem;
   border-right: 1px solid #ddd;
   font-size: 2rem;
   font-weight: bold;
   color: #0078d7;
+  font-family: "Raleway", sans-serif;
 }
 
-.service-title {
+.service-title p {
   margin-left: 2.5rem;
   font-size: 2rem;
   font-weight: bold;
   color: #0078d7;
+  font-family: "Raleway", sans-serif;
 }
 
 .services-text p {
-  margin-left: 2.5rem;
+  margin-left: 2.2rem;
   font-size: 2rem;
   font-weight: bold;
 }

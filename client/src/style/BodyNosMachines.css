@@ -90,6 +90,7 @@
   font-weight: bold;
   margin-bottom: 5px;
   color: #0078d7;
+  font-family: "Raleway", sans-serif;
 }
 
 .l-col p {
@@ -118,6 +119,7 @@
 .technical-details .row div:first-child {
   font-weight: bold;
   text-align: left;
+  font-family: "Raleway", sans-serif;
 }
 
 .technical-details .row div:last-child {

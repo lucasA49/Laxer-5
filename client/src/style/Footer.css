@@ -1,3 +1,101 @@
+.secondary-footer {
+  background-color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-radius: 40px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-left {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.info-left h4 {
+  font-family: "Raleway", sans-serif;
+}
+
+.info-left p {
+  margin: 0.5rem 0;
+  line-height: 2rem;
+}
+
+a[href^="tel:"] {
+  font-weight: bold;
+  color: #0073e6;
+  text-decoration: none;
+}
+
+a[href^="tel:"]:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-top: 2.5rem;
+}
+
+.footer-links a {
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  color: black;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5rem;
+}
+
+.footer-links a:hover {
+  color: #d10101;
+}
+
+.info-right {
+  flex: 1;
+  text-align: right;
+}
+
+.info-right p {
+  margin: 0.5rem 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.social-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0073e6;
+}
+
 .footer {
   margin: 0;
   background-color: #fff;
@@ -6,7 +104,7 @@
   bottom: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Espace entre les éléments */
+  justify-content: space-between;
   width: 100%;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -16,20 +114,20 @@
 
 .logofooter {
   height: 60px;
-  margin-left: 10px; /* Ajoute un espacement à gauche */
-  flex-shrink: 0; /* Empêche le logo de rétrécir */
+  margin-left: 10px;
+  flex-shrink: 0;
 }
 
 .footer-content {
-  flex: 1; /* Permet au contenu de texte de prendre tout l'espace disponible */
+  flex: 1;
   display: flex;
-  justify-content: center; /* Centre le texte horizontalement */
-  text-align: center; /* Centre le texte dans son conteneur */
+  justify-content: center;
+  text-align: center;
 }
 
 .textfooter {
   font-size: 1rem;
-  display: inline; /* Assure que tout le texte et le lien soient sur la même ligne */
+  display: inline;
 }
 
 .lienmentionslegales {
@@ -42,25 +140,26 @@
   text-decoration: underline;
 }
 
+/* Styles pour les petits écrans */
 @media (max-width: 768px) {
   .footer {
-    height: auto; /* Ajuste la hauteur pour les petits écrans */
-    flex-direction: column; /* Empile les éléments verticalement */
-    align-items: center; /* Centre les éléments */
-    justify-content: center; /* Centre les éléments */
-    padding: 1rem; /* Ajoute un peu d'espace autour */
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
     width: 100%;
   }
 
   .logofooter {
-    display: none; /* Cacher le logo sur mobile */
+    display: none; /* Masque le logo dans le footer sur mobile */
   }
 
   .footer-content {
     display: flex;
-    flex-direction: column; /* Empile les éléments verticalement */
-    align-items: center; /* Centre les éléments horizontalement */
-    justify-content: center; /* Centre les éléments verticalement */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .textfooter {
@@ -68,11 +167,65 @@
   }
 
   .lienmentionslegales {
-    font-size: 0.8rem; /* Réduit la taille de la police pour le lien */
-    text-decoration: none; /* Enlève la décoration du lien */
+    font-size: 0.8rem;
+    text-decoration: none;
   }
 
   .lienmentionslegales:hover {
     text-decoration: underline;
+  }
+
+  /* Responsiveness pour le conteneur secondaire */
+  .secondary-footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    margin: 0;
+    border-radius: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .info-left,
+  .info-right {
+    flex: 1;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .footer-links {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-links a {
+    font-size: 1rem;
+    text-align: left;
+    color: black;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .social-row {
+    margin-right: 15rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-icons a {
+    color: #333;
+    font-size: 1.5rem;
   }
 }

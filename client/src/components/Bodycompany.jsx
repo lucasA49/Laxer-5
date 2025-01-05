@@ -1,9 +1,6 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../style/Bodycompany.css";
 import logoentreprise from "../assets/Image/entreprise.jpg";
-import instagram from "../assets/icone/instagram.png";
-import linkedin from "../assets/icone/linkedin.png";
-import facebook from "../assets/icone/facebook.png";
 import scrolldownicon from "../assets/Image/scrolldownicon.png";
 
 function Bodycompany() {
@@ -122,83 +119,6 @@ function Bodycompany() {
           </div>
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="footer2">
-        <div className="footer-content2">
-          <div className="footer-info">
-            <h4>LAXER 5</h4>
-            <p>
-              Spécialiste découpe laser 5 axes
-              <br />
-              et pliage de haute précision près de Cholet.
-            </p>
-            <address>
-              ZI de Maunit - 134 rue des Pâtis Mortagne-sur-Sèvre
-              <br />
-              Horaires : Lundi - Vendredi: 8h - 12h / 13h - 18h
-              <br />
-              Téléphone : 02 51 57 51 56
-              <br />
-            </address>
-          </div>
-
-          <nav className="footer-links">
-            <Link to="/accueil">Accueil</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/entreprise">L'entreprise</Link>
-            <Link to="/nosmachines">Nos machines</Link>
-          </nav>
-
-          <div className="footer-socials">
-            <h4>Suivez Nous</h4>
-            <ul>
-              <li>
-                <a
-                  href="https://www.facebook.com/tonprofil"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    className="facebookicone"
-                    src={facebook}
-                    alt="Icône facebook"
-                  />
-                  Facebook
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/tonprofil"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    className="linkedinicone"
-                    src={linkedin}
-                    alt="Icône linkedin"
-                  />
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/tonprofil"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    className="instagramicone"
-                    src={instagram}
-                    alt="Icône instagram"
-                  />
-                  Instagram
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
