@@ -259,6 +259,117 @@
   transform: scale(1.1);
 }
 
+.MainContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Espacement entre les conteneurs */
+  margin: 20px;
+}
+
+/* Conteneur principal */
+.ContainerREntreprendre {
+  background-color: #c00;
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 1500px; /* Vous pouvez ajuster cette largeur max si nécessaire */
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box; /* Assurez-vous que le padding ne fait pas déborder le conteneur */
+}
+
+.ContentREntreprendre h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.ContentREntreprendre p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.buttonEntreprendre {
+  display: inline-block;
+  text-decoration: none;
+  background: white;
+  color: #c00;
+  padding: 10px 20px;
+  margin-top: 4rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.buttonEntreprendre:hover {
+  background-color: #fff3f3;
+}
+
+.logoEntreprendre img {
+  max-width: 150px; /* Ne touche pas à la taille du logo */
+  border-radius: 5px;
+}
+
+/* Conteneur pour la map et le texte */
+.ContainerMap {
+  background-color: #f4f4f4;
+  display: flex;
+  max-width: 50%; /* Limite la largeur de .ContainerMap à 50% */
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  border-radius: 20px;
+  box-sizing: border-box; /* Assurez-vous que le padding ne fait pas déborder le conteneur */
+  word-wrap: break-word; /* Force le texte à sauter à la ligne pour éviter le débordement */
+  overflow-wrap: break-word;
+}
+
+.callToAction {
+  flex: 1;
+  text-align: left;
+  word-wrap: break-word; /* Ajouté ici pour le texte dans .callToAction */
+  overflow-wrap: break-word; /* Ajouté ici pour le texte dans .callToAction */
+  white-space: normal; /* Permet au texte de sauter à la ligne */
+}
+
+.map iframe {
+  border-radius: 10px;
+  width: 400px;
+  height: 300px;
+  border: none;
+}
+
+.callToAction h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-family: "Raleway", sans-serif;
+}
+
+.callToAction p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5rem;
+}
+
+.ctbutton {
+  display: inline-block;
+  text-decoration: none;
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 7rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-family: "Raleway", sans-serif;
+}
+
+.ctbutton:hover {
+  background-color: #a00;
+}
+
 @media screen and (max-width: 1024px) {
   .header {
     flex-direction: column;
@@ -332,5 +443,21 @@
 
   .header-video {
     max-width: 100%;
+  }
+  .MainContainer {
+    flex-direction: column;
+  }
+  .ContainerREntreprendre {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ContentREntreprendre {
+    margin-bottom: 20px;
+  }
+
+  .logoEntreprendre img {
+    max-width: 100px;
   }
 }
