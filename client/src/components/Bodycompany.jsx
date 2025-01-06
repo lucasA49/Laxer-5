@@ -46,7 +46,9 @@ function Bodycompany() {
           alt="defile vers le bas"
         />
       </div>
-
+      <div className="nos-points-forts">
+        <p>Nos Valeurs</p>
+      </div>
       {/* Header Buttons */}
       <header className="header-qualité">
         <div className="header-buttons">

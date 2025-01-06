@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useRef, useEffect } from "react";
 import "../style/Bodyhome.css";
+import Vidéotest from "../assets/Image/Vidéotest.mp4";
 import BystarInox from "../assets/Image/BystarInox.jpg";
 import tetealfa3 from "../assets/Image/tetealfa3.jpg";
 import pieceplié from "../assets/Image/pieceplié.jpg";
@@ -55,6 +56,24 @@ function Bodyhome() {
               src={scrolldownicon}
               alt="défilement vers le bas"
             />
+          </div>
+
+          <div className="video-section">
+            <video
+              ref={videoRef}
+              src={Vidéotest}
+              className="header-video"
+              playsInline
+              autoPlay
+              muted
+              loop
+            >
+              <track
+                kind="descriptions"
+                label="Aucune description disponible"
+                srcLang="fr"
+              />
+            </video>
           </div>
         </div>
       </div>
@@ -162,13 +181,13 @@ function Bodyhome() {
             </iframe>
           </div>
           <div className="callToAction">
-            <h3>Vous avez un projet  ?</h3>
+            <h3>Vous avez un projet ?</h3>
             <p>
               Contactez-nous dès aujourd’hui pour discuter de vos besoins
               <br />
               et découvrir comment nous pouvons vous accompagner
               <br />
-              dans vos ambitions !
+              dans vos ambitions !
             </p>
             <a href="/contact" className="ctbutton">
               Contactez-nous ➜

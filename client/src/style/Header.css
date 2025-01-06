@@ -57,6 +57,12 @@
   color: #d10101;
 }
 
+.navbar a.active {
+  color: #d10101;
+  font-weight: bold;
+  border-bottom: 2px solid #d10101;
+}
+
 .contactbtn {
   font-family: "Raleway", sans-serif;
   background-color: #333;
