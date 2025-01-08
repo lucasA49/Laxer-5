@@ -1,14 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
-
 .footer {
   margin: 0;
   background-color: #fff;
-  padding-left: 10px;
+  padding: 0 10px;
   height: 11.5vh;
   bottom: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Espace entre les éléments */
   width: 100%;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -16,21 +14,67 @@
   z-index: 1000;
 }
 
-.footer-content {
-  display: flex;
-  width: 100%;
-}
-
 .logofooter {
   height: 60px;
-  margin: 0.8rem;
+  margin-left: 10px; /* Ajoute un espacement à gauche */
+  flex-shrink: 0; /* Empêche le logo de rétrécir */
+}
+
+.footer-content {
+  flex: 1; /* Permet au contenu de texte de prendre tout l'espace disponible */
+  display: flex;
+  justify-content: center; /* Centre le texte horizontalement */
+  text-align: center; /* Centre le texte dans son conteneur */
 }
 
 .textfooter {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
+  font-size: 1rem;
+  display: inline; /* Assure que tout le texte et le lien soient sur la même ligne */
+}
+
+.lienmentionslegales {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.lienmentionslegales:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    height: auto; /* Ajuste la hauteur pour les petits écrans */
+    flex-direction: column; /* Empile les éléments verticalement */
+    align-items: center; /* Centre les éléments */
+    justify-content: center; /* Centre les éléments */
+    padding: 1rem; /* Ajoute un peu d'espace autour */
+    width: 100%;
+  }
+
+  .logofooter {
+    display: none; /* Cacher le logo sur mobile */
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
+  }
+
+  .textfooter {
+    font-size: 0.8rem;
+  }
+
+  .lienmentionslegales {
+    font-size: 0.8rem; /* Réduit la taille de la police pour le lien */
+    text-decoration: none; /* Enlève la décoration du lien */
+  }
+
+  .lienmentionslegales:hover {
+    text-decoration: underline;
+  }
 }
 
 .lienmentionslegales {

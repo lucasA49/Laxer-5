@@ -1,16 +1,73 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+/* Styles globaux (Desktop par défaut) */
+@font-face {
+  font-family: "Switzer-Regular";
+  src:
+    url("../assets/Fonts/Switzer-Regular.woff2") format("woff2"),
+    url("../assets/Fonts/Switzer-Regular.woff") format("woff"),
+    url("../assets/Fonts/Switzer-Regular.eot") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Switzer-Regular";
 }
 
 .services-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+}
+
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.text-content h1,
+.text-content h2 {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  text-align: left;
+  font-family: "Exo 2", sans-serif;
+}
+
+.text-content .typewriter {
+  animation: typewriter 0.4s steps(20, end) forwards;
+  border-right: none;
+  width: 0;
+  display: block;
+}
+
+.text-content .delay-1 {
+  animation-delay: 0.5s;
+}
+
+.text-content .delay-2 {
+  animation-delay: 1s;
+}
+
+.text-content .delay-3 {
+  animation-delay: 1.5s;
+}
+
+.text-content .delay-4 {
+  animation-delay: 2s;
+}
+
+.text-content .highlight {
+  color: #d10101;
+  font-weight: bold;
 }
 
 .header {
@@ -26,24 +83,19 @@
 }
 
 .header h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   color: black;
   line-height: 1.3;
   margin-left: 10rem;
   margin-top: 10rem;
+  margin-bottom: 4rem;
 }
 
 .header h2 {
   font-size: 2.5rem;
   color: black;
   margin-left: 10rem;
-  margin-top: 2rem;
-  margin-bottom: 10rem;
-}
-
-.header .highlight {
-  color: #d10101;
-  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .header-images {
@@ -57,6 +109,7 @@
   border-radius: 8px;
   margin-top: 10rem;
   margin-right: 8rem;
+  margin-bottom: 10rem;
 }
 
 .scrolldown {
@@ -69,111 +122,198 @@
   font-size: 2rem;
   margin: 2rem 0;
   text-align: center;
-  margin-top: 15rem;
+  margin-top: 10rem;
   margin-bottom: 10rem;
 }
 
-.service-card {
+/* Nouvelles cards */
+.card-container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5rem;
-  border-radius: 12px;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+}
+
+.card-container::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.card {
+  flex: 1;
+  margin: 0 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-left: 20rem;
-  margin-right: 20rem;
-  height: 30rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 450px;
+  border-radius: 20px;
+  position: relative;
+  margin-bottom: 5rem;
 }
 
-.service-card img {
-  width: 50%;
-  object-fit: cover;
-}
-
-.service-content {
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.service-content h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.service-content p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-}
-
-.service-content nav {
-  background-color: white;
-  color: black;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  border-radius: 5px;
+.card .img-content {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  margin-top: 2rem;
-  margin-right: 28rem;
-  margin-bottom: 1rem;
+  justify-content: center;
+  transition:
+    scale 0.6s,
+    rotate 0.6s,
+    filter 1s;
 }
 
-.service-content nav.arrow {
-  margin-left: 5px;
+.card .img-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.service-content nav a {
+.card:hover .img-content {
+  scale: 3.5;
+  rotate: 30deg;
+  filter: blur(10px);
+}
+
+.heading {
+  color: #0078d7;
+}
+
+.card .content {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  gap: 10px;
+  color: #ffffff;
+  padding: 20px;
+  line-height: 1.5;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(50px);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card .content .heading {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.card:hover .content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover .img-content {
+  scale: 3.5;
+  rotate: 30deg;
+  filter: blur(10px);
+}
+
+/* Container du bouton */
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  margin-left: 5rem;
+  transform: translateX(0) translateY(20px);
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  z-index: 2;
+}
+
+.card:hover .button-container {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.discover-button {
+  display: inline-block;
   text-decoration: none;
-  color: #000;
-}
-
-.service-content nav a:hover {
-  color: #fff;
-}
-
-.service-content nav:hover {
-  background-color: #333;
+  background: #2b2525;
   color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition:
+    background 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
-.service-card.laser .service-content {
-  background-color: rgba(0, 0, 0, 0.7);
+.discover-button:hover {
+  background: #d10101;
+  transform: scale(1.1);
 }
 
-.service-card.laser nav a {
-  color: #000;
+@media screen and (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header h1 {
+    font-size: 3rem;
+    margin: 1rem;
+  }
+
+  .header h2 {
+    font-size: 2rem;
+    margin: 1rem;
+  }
+
+  .header-images img {
+    max-width: 80%;
+  }
+
+  .card-container {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 20px);
+  }
 }
 
-.service-card.pliage .service-content {
-  background-color: #e6f0f5;
-  color: black;
-}
+/* Mobile (écrans < 768px) */
+@media screen and (max-width: 768px) {
+  .text-content h1,
+  .text-content h2 {
+    overflow: visible;
+  }
 
-.service-card.pliage img {
-  height: 45rem;
-}
+  .header h1 {
+    font-size: 2.5rem;
+    margin-left: -3rem;
+    margin-top: 3rem;
+  }
 
-.service-card.laser3d img {
-  height: 30rem;
-}
+  .header h2 {
+    font-size: 1.8rem;
+    margin-left: -3rem;
+  }
 
-.service-card.pliage nav {
-  background-color: black;
-  color: white;
-}
+  .header-images img {
+    max-width: 100%;
+    margin: 0rem;
+  }
 
-.service-card.pliage nav a {
-  color: #fff;
-}
+  .services-title {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+  }
 
-.service-card.pliage nav:hover {
-  background-color: #444; /* Change background color on hover */
+  .card {
+    margin-bottom: 2rem;
+    flex: 1 1 100%;
+  }
 }

@@ -1,200 +1,95 @@
-.laser-cutting-container {
+.body-container {
   margin: 0 auto;
-  max-width: 1200px;
-  margin-top: 20rem;
-  margin-bottom: 10rem;
+  max-width: 1700px;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  height: 237rem;
+  padding-top: 1px;
 }
 
-.laser-cutting-content-2d {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
-  background-color: #f7f7f7;
+.prog-section,
+.laser3d-section,
+.manutention-section,
+.laser2d-section,
+.bending-section {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1500px;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
-.laser-cutting-text-2d {
-  width: 50%;
-  padding: 20px;
-}
-
-.laser-cutting-text-2d h1 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.laser-cutting-text-2d p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.laser-cutting-content-3d {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
-  background-color: #f7f7f7;
-}
-
-.laser-cutting-text-3d {
-  width: 50%;
-  padding: 20px;
-}
-
-.laser-cutting-text-3d h1 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.laser-cutting-text-3d p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.bending-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
-  background-color: #f7f7f7;
-}
-
-.bending-text {
-  width: 50%;
-  padding: 20px;
-}
-
-.bending-text h1 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.bending-text p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.specification {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-}
-
-.spec-items {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ccc;
-  width: 100%;
-}
-
-.spec-items:last-child {
-  border-bottom: none;
-}
-
-.spec-title {
-  font-size: 18px;
-  font-weight: bold;
-  width: 200px;
-  margin-bottom: 0;
-}
-
-.spec-items div {
-  display: flex;
-  flex-direction: column;
-}
-
-.spec-items p {
-  font-size: 16px;
-  margin: 0;
-  line-height: 1.5;
-}
-
-.laser-cutting-image-3d {
-  width: 50%;
-  padding: 20px;
-}
-
-.laser-cutting-image-3d img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
+.Prog-image,
+.bending-image,
+.manutention-image,
 .laser-cutting-image-2d {
   width: 50%;
   padding: 20px;
 }
 
-.laser-cutting-image-2d img {
+.reverse-layout {
+  display: flex;
+  flex-direction: row;
+}
+
+.reverse-layout .l-col.txt-col {
+  order: 2;
+}
+
+.laser-cutting-image-2d img,
+.Prog-image img,
+.bending-image img,
+.manutention-image img {
   width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+  z-index: 0;
 }
 
-.bending-image {
-  width: 50%;
-  padding: 20px;
-}
-
-.bending-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.capacity2d p {
-  margin-left: 4.5rem;
-}
-
-.files2d p {
-  margin-left: 5.5rem;
-}
-
-.spec-item3d p {
-  margin-right: 1rem;
+.Prog-image,
+.bending-image,
+.manutention-image,
+.laser-cutting-image-2d {
+  z-index: 0;
 }
 
 .two-col {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Aligns items at the top of the container */
+  align-items: flex-start;
   gap: 50px;
   margin-top: 40px;
+  margin-bottom: 5rem;
 }
 
-/* Left column with text content */
 .l-col {
   flex: 1;
   margin-right: 40px;
   display: flex;
-  flex-direction: column; /* Allow vertical stacking */
-  justify-content: center; /* Center content vertically within the column */
+  flex-direction: column;
+  justify-content: center;
+  margin: 3rem;
 }
 
-/* Right column for image */
 .r-col {
   flex: 0 0 40%;
   display: flex;
   justify-content: center;
 }
 
-/* Style for the text sections in the left column */
 .l-col h3 {
-  font-size: 24px;
+  font-size: 4vh;
   font-weight: bold;
   margin-bottom: 5px;
+  color: #0078d7;
 }
 
 .l-col p {
@@ -202,7 +97,6 @@
   line-height: 1.6;
 }
 
-/* Styling for the technical details section */
 .technical-details {
   margin-top: 20px;
   border-spacing: 0;
@@ -210,36 +104,252 @@
   border-collapse: collapse;
 }
 
-/* Rows inside the technical details */
 .technical-details .row {
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
   border-bottom: 1px solid #ccc;
 }
+
 .row:last-child {
-  border-bottom: none; /* Remove the border from the last row only */
+  border-bottom: none;
 }
 
-/* The first column in each row (titles like Machines, Dimension, etc.) */
 .technical-details .row div:first-child {
   font-weight: bold;
-  text-align: left; /* Align left to match the reference */
+  text-align: left;
 }
 
-/* The second column in each row (the details themselves) */
 .technical-details .row div:last-child {
-  text-align: left; /* Align left for the content */
+  text-align: left;
 }
 
-/* Adding some padding and centering the text in the second column */
 .technical-details .row div {
   flex: 1;
 }
 
-/* Image styling */
-.img-col img {
-  border-radius: 15px;
-  width: 100%;
-  height: auto;
+/* Responsive pour tablettes et petits écrans */
+@media screen and (max-width: 1024px) {
+  .body-container {
+    margin-top: 10rem;
+    height: 373rem;
+  }
+
+  .two-col {
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px;
+  }
+
+  .l-col,
+  .Prog-image,
+  .manutention-image,
+  .bending-image,
+  .laser-cutting-image-2d {
+    width: 100%;
+    margin: 0;
+  }
+
+  .manutention-section,
+  .prog-section,
+  .laser3d-section,
+  .bending-section,
+  .laser2d-section {
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .two-col.l-col h3 {
+    order: 1;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .two-col .r-col img {
+    order: 3;
+    width: 100%;
+    margin-bottom: 1rem;
+    display: block;
+    border-radius: 10px;
+  }
+
+  .two-col .l-col p {
+    order: 2;
+    text-align: left;
+  }
+
+  /* Sections inversées */
+  .two-col.reverse-layout .r-col img {
+    order: 2;
+    width: 100%;
+    margin-bottom: 1rem;
+    display: block;
+    border-radius: 10px;
+  }
+
+  .reverse-layout .laser-cutting-image-2d,
+  .reverse-layout .manutention-image,
+  .reverse-layout .bending-image-2d {
+    order: 3;
+    padding: 0;
+  }
+
+  .manutention-section,
+  .prog-section,
+  .laser3d-section,
+  .bending-section,
+  .laser2d-section {
+    margin-top: 3rem;
+  }
+
+  .two-col.reverse-layout .l-col h3 {
+    order: 1;
+    text-align: left;
+  }
+
+  .two-col.reverse-layout p {
+    order: 3;
+    text-align: left;
+  }
+
+  /* Technical details */
+  .technical-details {
+    order: 4;
+  }
+
+  /* Section spécifique : Manutention */
+
+  .l-col h3 {
+    order: 1;
+  }
+
+  .two-col,
+  .l-col p {
+    order: 2;
+  }
+
+  .two-col,
+  .technical-details {
+    order: 3;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .react-multi-carousel-arrow {
+    display: none !important;
+  }
+
+  .reverse-layout {
+    flex-direction: column;
+    /* Empile les éléments verticalement */
+  }
+
+  .reverse-layout .laser-cutting-image-2d,
+  .reverse-layout .manutention-image,
+  .reverse-layout .bending-image-2d {
+    order: 3;
+    /* Place les images en troisième position sur mobile */
+  }
+
+  .reverse-layout .l-col.txt-col {
+    order: 2;
+    /* Place le texte en deuxième position */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .body-container {
+    margin-top: 7rem;
+    height: 350rem;
+  }
+
+  .two-col {
+    flex-direction: column;
+  }
+
+  /* Sections normales */
+  .two-col.l-col h3 {
+    order: 1;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .two-col .r-col img {
+    order: 3;
+    width: 100%;
+    margin-bottom: 1rem;
+    display: block;
+    border-radius: 10px;
+  }
+
+  .two-col .l-col p {
+    order: 2;
+    font-size: 2.5vh;
+    text-align: left;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Sections inversées */
+  .two-col.reverse-layout .r-col img {
+    order: 2;
+    width: 100%;
+    margin-bottom: 1rem;
+    display: block;
+    border-radius: 10px;
+  }
+
+  .Prog-image,
+  .bending-image,
+  .manutention-image,
+  .laser-cutting-image-2d {
+    padding: 0;
+  }
+
+  .manutention-section,
+  .prog-section,
+  .laser3d-section,
+  .bending-section,
+  .laser2d-section {
+    margin-top: 3rem;
+  }
+
+  .two-col.reverse-layout .l-col h3 {
+    order: 1;
+    font-size: 5vh;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .two-col.reverse-layout p {
+    order: 3;
+    font-size: 2.5vh;
+    text-align: left;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Technical details */
+  .technical-details {
+    order: 4;
+    margin-top: 1rem;
+  }
+
+  /* Section spécifique : Manutention */
+
+  .l-col h3 {
+    order: 1;
+    font-size: 5vh;
+  }
+
+  .two-col,
+  .l-col p {
+    order: 2;
+  }
+
+  .two-col,
+  .technical-details {
+    order: 3;
+    /* Technical details avant l'image */
+  }
 }
