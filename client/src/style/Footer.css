@@ -22,7 +22,8 @@
 }
 
 .info-left h4 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2em;
 }
 
 .info-left p {
@@ -104,7 +105,7 @@ a[href^="tel:"]:hover {
   bottom: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Espace entre les éléments */
+  justify-content: space-between;
   width: 100%;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -152,7 +153,8 @@ a[href^="tel:"]:hover {
   }
 
   .logofooter {
-    display: none; /* Masque le logo dans le footer sur mobile */
+    display: none;
+    /* Masque le logo dans le footer sur mobile */
   }
 
   .footer-content {
@@ -196,35 +198,23 @@ a[href^="tel:"]:hover {
     flex: 1;
     text-align: left;
     margin-bottom: 1rem;
+    margin-top: 2rem;
   }
 
   .footer-links {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .footer-links a {
-    font-size: 1rem;
-    text-align: left;
-    color: black;
+    display: none;
   }
 
   .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .social-row {
-    margin-right: 15rem;
-    display: flex;
-    gap: 1rem;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
   }
 
   .social-icons a {
+    display: flex;
+    flex-direction: row;
+
     color: #333;
     font-size: 1.5rem;
   }

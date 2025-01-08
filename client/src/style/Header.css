@@ -135,12 +135,12 @@
     margin-right: rem;
     background-color: #ffffff;
     padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .navbar.active {
     display: flex;
-    margin-top: -1rem;
+    margin-top: -3rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .burger-menu {

@@ -113,8 +113,17 @@ function BodyNosServices() {
           </div>
           <div className="service-text">
             <p>
-              Our 3D laser cutting workshop allows precise and customized
-              cuts...
+              Depuis 2008, nous sommes spécialisés dans la découpe laser 3D, une
+              technologie avancée qui permet de réaliser des découpes complexes
+              avec une précision exceptionnelle. Grâce à plus de 15 ans
+              d'expérience et à un parc machines moderne, nous répondons aux
+              besoins les plus exigeants, qu'il s'agisse de pièces unitaires ou
+              de grandes séries. Nous intervenons dans divers secteurs, tels que
+              l’automobile, le prototypage, l’industrie mécanique etc. Nous
+              garantissons des résultats impeccables, parfaitement adaptés aux
+              spécifications de chaque projet. Faites confiance à notre
+              expertise pour vos besoins en découpe laser 3D et bénéficiez de
+              solutions sur mesure.{" "}
             </p>
           </div>
           <div className="carousel-container">
@@ -168,13 +177,13 @@ function BodyNosServices() {
             <ul>
               <li>
                 <span className="animated-number">
-                  <AnimatedNumber targetValue={1500} duration={2000} />
+                  <AnimatedNumber targetValue={2000} duration={2000} />
                 </span>{" "}
                 mm de largeur de Tôle
               </li>
               <li>
                 <span className="animated-number">
-                  <AnimatedNumber targetValue={3000} duration={2000} />
+                  <AnimatedNumber targetValue={4000} duration={2000} />
                 </span>{" "}
                 mm de longueur de Tôle
               </li>
@@ -200,8 +209,16 @@ function BodyNosServices() {
           </div>
           <div className="service-text">
             <p>
-              Our 3D laser cutting workshop allows precise and customized
-              cuts...
+              Spécialisés dans la découpe 2D depuis plusieurs années, nous
+              offrons des solutions de découpe laser précises et rapides sur une
+              large gamme de matériaux, tels que l’acier, l’acier inoxydable,
+              l’aluminium et d’autres métaux non ferreux. Nos équipements
+              modernes permettent de traiter des tôles de différentes épaisseurs
+              avec une grande précision, garantissant des résultats de haute
+              qualité pour des pièces unitaires ou des séries. La découpe 2D est
+              idéale pour des applications nécessitant des découpes nettes et
+              rapides, avec une finition soignée et conforme aux spécifications
+              techniques de chaque projet.
             </p>
           </div>
           <div className="carousel-container">
@@ -240,48 +257,58 @@ function BodyNosServices() {
           </div>
         </div>
         <div className="service-item">
-          <div className="specifications">
+          <div className="specifications-pliage">
             <ul>
-              <li>
-                <span className="animated-number">
-                  <AnimatedNumber targetValue={1500} duration={2000} />
-                </span>{" "}
-                mm de largeur de Tôle
-              </li>
               <li>
                 <span className="animated-number">
                   <AnimatedNumber targetValue={3000} duration={2000} />
                 </span>{" "}
-                mm de longueur de Tôle
+                mm de longeur de Tôle
               </li>
+
               <li>
                 <span className="animated-number">
                   <AnimatedNumber targetValue={20} duration={2000} />
                 </span>{" "}
-                mm d'épaisseur de découpe sur de l'acier
+                mm d'épaisseur de pliage sur de l'acier
               </li>
               <li>
                 <span className="animated-number">
                   <AnimatedNumber targetValue={12} duration={2000} />
                 </span>{" "}
-                mm d'épaisseur de découpe sur de l'inox
+                mm d'épaisseur de pliage sur de l'inox
               </li>
               <li>
                 <span className="animated-number">
                   <AnimatedNumber targetValue={10} duration={2000} />
                 </span>{" "}
-                mm d'épaisseur de découpe sur de l'alu
+                mm d'épaisseur de pliage sur de l'alu
               </li>
             </ul>
           </div>
           <div className="service-text">
             <p>
-              Our 3D laser cutting workshop allows precise and customized
-              cuts...
+              Notre service de pliage complète idéalement la découpe 2D, vous
+              offrant des pièces découpées et pliées dans un état fini, prêtes à
+              l’emploi. Grâce à des équipements modernes, nous réalisons des
+              pliages complexes avec une grande précision, qu’il s’agisse de
+              petites séries ou de productions plus importantes. Le pliage
+              permet de donner aux pièces métalliques des formes spécifiques,
+              tout en respectant des tolérances strictes et en garantissant une
+              finition impeccable. Nous assurons une parfaite coordination entre
+              la découpe 2D et le pliage pour des résultats de qualité, rapides
+              et conformes aux exigences de votre projet.
             </p>
           </div>
           <div className="carousel-container">
-            <Carousel responsive={responsive} infinite showDots autoPlay>
+            <Carousel
+              responsive={responsive}
+              infinite
+              showDots={false}
+              autoPlay
+              arrows={!isMobile}
+              swipeable
+            >
               <div>
                 <div className="carousel-image">
                   <img src={pieceplié2} alt="Pièce pliée avec précision" />
