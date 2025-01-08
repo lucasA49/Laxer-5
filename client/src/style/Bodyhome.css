@@ -10,6 +10,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Raleway";
+  src: url("../assets/Fonts/Raleway-Black.ttf") format("truetype");
+  font-weight: 900; /* Normal */
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,109 +25,93 @@
   font-family: "Switzer-Regular";
 }
 
+.bodyhome {
+  background-color: #fff;
+}
+
 .services-container {
+  background-color: #f5f5f5;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
-@keyframes typewriter {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 100%;
-  }
-}
-
-.text-content h1,
-.text-content h2 {
-  overflow: hidden;
-  white-space: nowrap;
-  display: inline-block;
-  text-align: left;
-  font-family: "Exo 2", sans-serif;
-}
-
-.text-content .typewriter {
-  animation: typewriter 0.4s steps(20, end) forwards;
-  border-right: none;
-  width: 0;
-  display: block;
-}
-
-.text-content .delay-1 {
-  animation-delay: 0.5s;
-}
-
-.text-content .delay-2 {
-  animation-delay: 1s;
-}
-
-.text-content .delay-3 {
-  animation-delay: 1.5s;
-}
-
-.text-content .delay-4 {
-  animation-delay: 2s;
-}
-
-.text-content .highlight {
-  color: #d10101;
-  font-weight: bold;
-}
-
-.header {
+.intro-container {
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin: 2rem 0;
-  margin-top: 3rem;
-}
-
-.header .text-content {
-  max-width: 60%;
-}
-
-.header h1 {
-  font-size: 4rem;
-  color: black;
-  line-height: 1.3;
-  margin-left: 10rem;
+  align-items: center;
+  padding: 3rem;
   margin-top: 10rem;
-  margin-bottom: 4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-radius: 20px;
+  height: 40rem;
 }
 
-.header h2 {
-  font-size: 2.5rem;
-  color: black;
-  margin-left: 10rem;
-  margin-bottom: 1rem;
+.text-section {
+  flex: 1;
+  padding-right: 2rem;
+  margin-bottom: 8rem;
 }
 
-.header-images {
-  display: flex;
-  justify-content: flex-end;
+.text-section h1 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  color: #2b2525;
+  font-family: "Raleway", sans-serif;
 }
 
-.header-images img {
-  width: 100%;
-  max-width: 80rem;
-  border-radius: 8px;
-  margin-top: 10rem;
-  margin-right: 8rem;
-  margin-bottom: 10rem;
+.text-section h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+  font-family: "Raleway", sans-serif;
+}
+
+.text-section .highlight {
+  color: #d10101;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+}
+
+.text-section h2:last-child {
+  margin-bottom: 200rem; /* Applique un margin-bottom uniquement au dernier h2 */
 }
 
 .scrolldown {
+  height: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  position: relative; /* Permet de déplacer l'élément */
+  top: 4rem;
+}
+
+.scrolldown:hover {
+  opacity: 1;
+}
+
+.video-section {
+  flex: 1;
   display: flex;
   justify-content: center;
-  opacity: 0.7;
+  align-items: center;
+}
+
+.header-video {
+  width: 120%;
+  max-width: 1500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-right: 8rem;
 }
 
 .services-title {
-  font-size: 2rem;
+  color: #2b2525;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
   margin: 2rem 0;
   text-align: center;
   margin-top: 10rem;
@@ -127,6 +119,18 @@
 }
 
 /* Nouvelles cards */
+
+.cards-container {
+  background-color: #f4f4f4;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ddd;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-radius: 40px;
+  padding: 30px;
+  margin-bottom: 5rem;
+}
+
 .card-container {
   display: flex;
   justify-content: space-between;
@@ -153,7 +157,6 @@
   height: 450px;
   border-radius: 20px;
   position: relative;
-  margin-bottom: 5rem;
 }
 
 .card .img-content {
@@ -182,7 +185,8 @@
 }
 
 .heading {
-  color: #0078d7;
+  color: #101011;
+  font-family: "Raleway", sans-serif;
 }
 
 .card .content {
@@ -217,7 +221,6 @@
   filter: blur(10px);
 }
 
-/* Container du bouton */
 .button-container {
   display: flex;
   justify-content: flex-start;
@@ -239,6 +242,7 @@
 }
 
 .discover-button {
+  font-family: "Raleway", sans-serif;
   display: inline-block;
   text-decoration: none;
   background: #2b2525;
@@ -253,6 +257,117 @@
 .discover-button:hover {
   background: #d10101;
   transform: scale(1.1);
+}
+
+.MainContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Espacement entre les conteneurs */
+  margin: 20px;
+}
+
+/* Conteneur principal */
+.ContainerREntreprendre {
+  background-color: #c00;
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 1500px; /* Vous pouvez ajuster cette largeur max si nécessaire */
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box; /* Assurez-vous que le padding ne fait pas déborder le conteneur */
+}
+
+.ContentREntreprendre h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.ContentREntreprendre p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.buttonEntreprendre {
+  display: inline-block;
+  text-decoration: none;
+  background: white;
+  color: #c00;
+  padding: 10px 20px;
+  margin-top: 4rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.buttonEntreprendre:hover {
+  background-color: #fff3f3;
+}
+
+.logoEntreprendre img {
+  max-width: 150px; /* Ne touche pas à la taille du logo */
+  border-radius: 5px;
+}
+
+/* Conteneur pour la map et le texte */
+.ContainerMap {
+  background-color: #f4f4f4;
+  display: flex;
+  max-width: 50%; /* Limite la largeur de .ContainerMap à 50% */
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  border-radius: 20px;
+  box-sizing: border-box; /* Assurez-vous que le padding ne fait pas déborder le conteneur */
+  word-wrap: break-word; /* Force le texte à sauter à la ligne pour éviter le débordement */
+  overflow-wrap: break-word;
+}
+
+.callToAction {
+  flex: 1;
+  text-align: left;
+  word-wrap: break-word; /* Ajouté ici pour le texte dans .callToAction */
+  overflow-wrap: break-word; /* Ajouté ici pour le texte dans .callToAction */
+  white-space: normal; /* Permet au texte de sauter à la ligne */
+}
+
+.map iframe {
+  border-radius: 10px;
+  width: 400px;
+  height: 300px;
+  border: none;
+}
+
+.callToAction h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-family: "Raleway", sans-serif;
+}
+
+.callToAction p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5rem;
+}
+
+.ctbutton {
+  display: inline-block;
+  text-decoration: none;
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 7rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-family: "Raleway", sans-serif;
+}
+
+.ctbutton:hover {
+  background-color: #a00;
 }
 
 @media screen and (max-width: 1024px) {
@@ -315,5 +430,34 @@
   .card {
     margin-bottom: 2rem;
     flex: 1 1 100%;
+  }
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-section {
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+
+  .header-video {
+    max-width: 100%;
+  }
+  .MainContainer {
+    flex-direction: column;
+  }
+  .ContainerREntreprendre {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ContentREntreprendre {
+    margin-bottom: 20px;
+  }
+
+  .logoEntreprendre img {
+    max-width: 100px;
   }
 }

@@ -93,38 +93,6 @@ const router = createBrowserRouter([
       </>
     ),
   },
-  {
-    path: "/contact",
-    element: <Contact />,
-  },
-  {
-    path: "/accueil",
-    element: <Home />,
-  },
-  {
-    path: "/entreprise",
-    element: <Company />,
-  },
-  {
-    path: "/mentions-legales",
-    element: <MentionsLégales />,
-  },
-  {
-    path: "/services",
-    element: <Services />,
-  },
-  {
-    path: "/nosmachines",
-    element: <NosMachines />,
-  },
-  {
-    path: "/admin",
-    element: <Home />,
-  },
-  {
-    path: "/Chargement",
-    element: <Spinner />,
-  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
