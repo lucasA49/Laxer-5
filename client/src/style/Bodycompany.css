@@ -48,7 +48,8 @@
   color: #e60000;
   font-size: 2.5em;
   margin-top: 2rem;
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
 }
 
 .right-side h2 {
@@ -67,6 +68,7 @@
   font-size: 1.1em;
   line-height: 1.6;
   margin-bottom: 11rem;
+  color: black;
 }
 
 .cta-button {
@@ -346,8 +348,16 @@
   .scrolldown img {
     margin-top: 3rem;
     margin-bottom: 3rem;
-    width: 40px;
+    width: 400px;
     height: auto;
+  }
+
+  .nos-points-forts {
+    margin-top: 2.5rem;
+    margin-right: 0rem;
+    padding: 0;
+    font-size: 2em;
+    transform: translateX(-18%) rotate(0deg);
   }
 
   .header-qualité {
@@ -402,7 +412,7 @@
   }
 
   .timeline-details h3 {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   .timeline-details p {

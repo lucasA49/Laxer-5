@@ -2,11 +2,11 @@
   margin: 0 auto;
   max-width: 1850px;
   margin-top: 10rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   background-color: #f5f5f5;
   border-radius: 20px;
-  height: 129.5rem;
-  padding-top: 20px;
+  height: 123.5rem;
+  padding-top: 40px;
 }
 
 .path-section-services {
@@ -52,10 +52,9 @@
   font-family: "Raleway", sans-serif;
 }
 
-.services-text p {
-  margin-left: 2.2rem;
-  font-size: 2rem;
-  font-weight: bold;
+.service-text p {
+  margin-right: 2rem;
+  line-height: 2rem;
 }
 
 .service-item {
@@ -79,6 +78,17 @@
 }
 
 .specifications li {
+  list-style-type: none;
+  line-height: 4.5rem;
+}
+
+.specifications-pliage {
+  padding-right: 81px;
+  border-right: 1px solid #ddd;
+  font-size: 1.2rem;
+}
+
+.specifications-pliage li {
   list-style-type: none;
   line-height: 4.5rem;
 }
@@ -226,8 +236,21 @@
     margin-top: 10px;
   }
 
+  .specifications-pliage {
+    order: 5;
+    border-right: none;
+    padding: 0;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
   .title-specifications {
     display: none;
+  }
+
+  .specifications li {
+    line-height: 2rem;
+    text-align: left;
   }
 
   .specifications li {
@@ -292,6 +315,11 @@
     margin-bottom: 2rem;
   }
 
+  .service-title p {
+    margin-left: 0;
+    font-size: 1.8rem;
+  }
+
   .service-title {
     order: 1;
     margin-left: 0rem;
@@ -300,11 +328,12 @@
     text-align: center;
   }
 
-  .service-text {
+  .service-text p {
     order: 2;
     font-size: 1.2rem;
-    text-align: center;
+    text-align: left;
     margin-bottom: 1rem;
+    margin-left: 1.2rem;
   }
 
   .carousel-container {

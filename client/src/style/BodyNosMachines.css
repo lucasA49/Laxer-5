@@ -5,7 +5,7 @@
   margin-bottom: 5rem;
   background-color: #f5f5f5;
   border-radius: 20px;
-  height: 233rem;
+  height: 228rem;
   padding-top: 1px;
 }
 
@@ -262,17 +262,15 @@
 @media screen and (max-width: 480px) {
   .body-container {
     margin-top: 7rem;
-    height: 350rem;
+    height: 355rem;
   }
 
   .two-col {
     flex-direction: column;
   }
 
-  /* Sections normales */
-  .two-col.l-col h3 {
-    order: 1;
-    text-align: left;
+  .l-col.txt-col h3 {
+    font-size: 4vh;
     margin-bottom: 1rem;
   }
 
@@ -318,7 +316,7 @@
 
   .two-col.reverse-layout .l-col h3 {
     order: 1;
-    font-size: 5vh;
+    font-size: 4vh;
     text-align: left;
     margin-bottom: 1rem;
   }
@@ -352,6 +350,5 @@
   .two-col,
   .technical-details {
     order: 3;
-    /* Technical details avant l'image */
   }
 }

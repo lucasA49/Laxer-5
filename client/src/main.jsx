@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     path: "/",
     element: (
       <>
-        <ScrollToTop /> {/* Ajout ici */}
+        <ScrollToTop />
         <App />
       </>
     ),

@@ -45,3 +45,10 @@
 footer {
   margin-top: 10rem;
 }
+
+@media screen and (max-width: 480px) {
+  .container-central {
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+  }
+}
