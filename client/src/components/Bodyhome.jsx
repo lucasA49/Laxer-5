@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useRef, useEffect } from "react";
 import "../style/Bodyhome.css";
 import Vidéotest from "../assets/Image/Vidéotest.mp4";
@@ -93,9 +92,9 @@ function Bodyhome() {
               </p>
             </div>
             <div className="button-container">
-              <Link to="/services" className="discover-button">
+              <a href="/services#decoupe-laser-3d" className="discover-button">
                 Découvrir ➜
-              </Link>
+              </a>
             </div>
           </div>
           <div className="card">
@@ -110,9 +109,9 @@ function Bodyhome() {
               </p>
             </div>
             <div className="button-container">
-              <Link to="/services" className="discover-button">
+              <a href="/services#decoupe-laser-2d" className="discover-button">
                 Découvrir ➜
-              </Link>
+              </a>
             </div>
           </div>
           <div className="card">
@@ -127,9 +126,9 @@ function Bodyhome() {
               </p>
             </div>
             <div className="button-container">
-              <Link to="/services" className="discover-button">
+              <a href="/services#pliage" className="discover-button">
                 Découvrir ➜
-              </Link>
+              </a>
             </div>
           </div>
         </div>

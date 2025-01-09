@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import "../style/BodyServices.css";
 import Carousel from "react-multi-carousel";
@@ -65,11 +66,23 @@ function BodyNosServices() {
       items: 1,
     },
   };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
     <div className="body-contener">
       <div className="services-contener">
         <div className="subheader">
-          <div className="title-specifications">
+          <div id="decoupe-laser-3d" className="title-specifications">
             <p>Spécifications</p>
           </div>
           <div className="service-title">
@@ -172,7 +185,7 @@ function BodyNosServices() {
             <p>Découpe Laser 3 Axes</p>
           </div>
         </div>
-        <div className="service-item">
+        <div id="decoupe-laser-2d" className="service-item">
           <div className="specifications">
             <ul>
               <li>
@@ -256,7 +269,7 @@ function BodyNosServices() {
             <p>Pliage</p>
           </div>
         </div>
-        <div className="service-item">
+        <div id="pliage" className="service-item">
           <div className="specifications-pliage">
             <ul>
               <li>
