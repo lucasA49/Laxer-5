@@ -5,17 +5,17 @@ import "../style/BodyServices.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useMediaQuery } from "react-responsive";
-import bystarinox from "../assets/Image/BystarInox.jpg";
-import pieceplié2 from "../assets/Image/pieceplié2.jpg";
-import pieceplié3 from "../assets/Image/pieceplié3.jpg";
-import pieceplié4 from "../assets/Image/pieceplié4.jpg";
-import pieceplié5 from "../assets/Image/pieceplié5.jpg";
-import pieceplié6 from "../assets/Image/pieceplié6.jpg";
-import pieceplié7 from "../assets/Image/pieceplié7.jpg";
+import Bystar2 from "../assets/Image/Bystar2.jpg";
+import Bystar3 from "../assets/Image/Bystar3.jpg";
+import pieceplié2 from "../assets/Image/pieceplié2.png";
+import pieceplié3 from "../assets/Image/pieceplié3.png";
+import pieceplié4 from "../assets/Image/pieceplié4.png";
+import pieceplié5 from "../assets/Image/pieceplié5.png";
+import pieceplié6 from "../assets/Image/pieceplié6.png";
 import tetealfa1 from "../assets/Image/tetealfa1.jpg";
 import tetealfa2 from "../assets/Image/tetealfa2.jpg";
 import tetealfa3 from "../assets/Image/tetealfa3.jpg";
-import pièces2d from "../assets/Image/pièces2d.jpg";
+import découpe2dpcs from "../assets/Image/découpe2dpcs.jpg";
 
 function AnimatedNumber({ targetValue, duration }) {
   const [value, setValue] = useState(0);
@@ -86,41 +86,29 @@ function BodyNosServices() {
             <p>Spécifications</p>
           </div>
           <div className="service-title">
-            <p>Découpe Laser 5 Axes</p>
+            <p>Découpe Laser 3D</p>
           </div>
         </div>
         <div className="service-item">
           <div className="specifications">
             <ul>
-              <li>
-                <span className="animated-number">
-                  <AnimatedNumber targetValue={1500} duration={2000} />
-                </span>{" "}
-                mm de largeur de Tôle
-              </li>
-              <li>
+              <li className="with-offset-border-3d">
                 <span className="animated-number">
                   <AnimatedNumber targetValue={3000} duration={2000} />
                 </span>{" "}
-                mm de longueur de Tôle
+                mm de longueur en X
               </li>
               <li>
                 <span className="animated-number">
-                  <AnimatedNumber targetValue={20} duration={2000} />
+                  <AnimatedNumber targetValue={2000} duration={2000} />
                 </span>{" "}
-                mm d'épaisseur de découpe sur de l'acier
+                mm de largeur en Y
               </li>
               <li>
                 <span className="animated-number">
-                  <AnimatedNumber targetValue={12} duration={2000} />
+                  <AnimatedNumber targetValue={750} duration={2000} />
                 </span>{" "}
-                mm d'épaisseur de découpe sur de l'inox
-              </li>
-              <li>
-                <span className="animated-number">
-                  <AnimatedNumber targetValue={10} duration={2000} />
-                </span>{" "}
-                mm d'épaisseur de découpe sur de l'alu
+                mm de hauteur en Z
               </li>
             </ul>
           </div>
@@ -128,15 +116,14 @@ function BodyNosServices() {
             <p>
               Depuis 2008, nous sommes spécialisés dans la découpe laser 3D, une
               technologie avancée qui permet de réaliser des découpes complexes
-              avec une précision exceptionnelle. Grâce à plus de 15 ans
-              d'expérience et à un parc machines moderne, nous répondons aux
-              besoins les plus exigeants, qu'il s'agisse de pièces unitaires ou
-              de grandes séries. Nous intervenons dans divers secteurs, tels que
-              l’automobile, le prototypage, l’industrie mécanique etc. Nous
-              garantissons des résultats impeccables, parfaitement adaptés aux
-              spécifications de chaque projet. Faites confiance à notre
-              expertise pour vos besoins en découpe laser 3D et bénéficiez de
-              solutions sur mesure.{" "}
+              avec précision. Grâce à plus de 15 ans d'expérience et à un parc
+              machines moderne, nous répondons aux besoins les plus exigeants,
+              qu'il s'agisse de pièces unitaires ou de grandes séries. Nous
+              intervenons dans divers secteurs, tels que l’automobile, le
+              prototypage, l’industrie etc. Nous garantissons des résultats
+              parfaitement adaptés aux spécifications de chaque projet. Faites
+              confiance à notre expertise pour vos besoins en découpe laser 3D
+              et bénéficiez de solutions sur mesure.{" "}
             </p>
           </div>
           <div className="carousel-container">
@@ -182,11 +169,11 @@ function BodyNosServices() {
             <p>Spécifications</p>
           </div>
           <div className="service-title">
-            <p>Découpe Laser 3 Axes</p>
+            <p>Découpe Laser 2D</p>
           </div>
         </div>
         <div id="decoupe-laser-2d" className="service-item">
-          <div className="specifications">
+          <div className="specifications-2d">
             <ul>
               <li>
                 <span className="animated-number">
@@ -224,14 +211,13 @@ function BodyNosServices() {
             <p>
               Spécialisés dans la découpe 2D depuis plusieurs années, nous
               offrons des solutions de découpe laser précises et rapides sur une
-              large gamme de matériaux, tels que l’acier, l’acier inoxydable,
-              l’aluminium et d’autres métaux non ferreux. Nos équipements
-              modernes permettent de traiter des tôles de différentes épaisseurs
-              avec une grande précision, garantissant des résultats de haute
-              qualité pour des pièces unitaires ou des séries. La découpe 2D est
-              idéale pour des applications nécessitant des découpes nettes et
-              rapides, avec une finition soignée et conforme aux spécifications
-              techniques de chaque projet.
+              large gamme de matériaux, tels que l’acier, l’inox, l’aluminium
+              etc. Nos équipements modernes permettent de traiter des tôles de
+              différentes épaisseurs avec une grande précision, garantissant des
+              résultats de haute qualité pour des pièces unitaires ou des
+              séries. La découpe 2D est idéale pour des applications nécessitant
+              des découpes nettes et rapides, avec une finition soignée et
+              conforme aux spécifications techniques de chaque projet.
             </p>
           </div>
           <div className="carousel-container">
@@ -245,12 +231,17 @@ function BodyNosServices() {
             >
               <div>
                 <div className="carousel-image">
-                  <img src={bystarinox} alt="Panneau en acier découpé" />
+                  <img src={Bystar2} alt="Panneau en acier découpé" />
                 </div>
               </div>
               <div>
                 <div className="carousel-image">
-                  <img src={pièces2d} alt="Pièces 2D découpées au laser" />
+                  <img src={Bystar3} alt="Panneau en acier découpé" />
+                </div>
+              </div>
+              <div>
+                <div className="carousel-image">
+                  <img src={découpe2dpcs} alt="Pièces 2D découpées au laser" />
                 </div>
               </div>
             </Carousel>
@@ -272,30 +263,18 @@ function BodyNosServices() {
         <div id="pliage" className="service-item">
           <div className="specifications-pliage">
             <ul>
-              <li>
+              <li className="with-offset-border-pliage">
                 <span className="animated-number">
-                  <AnimatedNumber targetValue={3000} duration={2000} />
+                  <AnimatedNumber targetValue={3100} duration={2000} />
                 </span>{" "}
-                mm de longeur de Tôle
+                mm de longeur de pliage maximum
               </li>
 
               <li>
                 <span className="animated-number">
-                  <AnimatedNumber targetValue={20} duration={2000} />
+                  <AnimatedNumber targetValue={160} duration={2000} />
                 </span>{" "}
-                mm d'épaisseur de pliage sur de l'acier
-              </li>
-              <li>
-                <span className="animated-number">
-                  <AnimatedNumber targetValue={12} duration={2000} />
-                </span>{" "}
-                mm d'épaisseur de pliage sur de l'inox
-              </li>
-              <li>
-                <span className="animated-number">
-                  <AnimatedNumber targetValue={10} duration={2000} />
-                </span>{" "}
-                mm d'épaisseur de pliage sur de l'alu
+                Tonnes de pliage maximum
               </li>
             </ul>
           </div>
@@ -307,10 +286,10 @@ function BodyNosServices() {
               pliages complexes avec une grande précision, qu’il s’agisse de
               petites séries ou de productions plus importantes. Le pliage
               permet de donner aux pièces métalliques des formes spécifiques,
-              tout en respectant des tolérances strictes et en garantissant une
-              finition impeccable. Nous assurons une parfaite coordination entre
-              la découpe 2D et le pliage pour des résultats de qualité, rapides
-              et conformes aux exigences de votre projet.
+              tout en respectant des tolérances strictes. Nous assurons une
+              parfaite coordination entre la découpe 2D et le pliage pour des
+              résultats de qualité, rapides et conformes aux exigences de votre
+              projet.
             </p>
           </div>
           <div className="carousel-container">
@@ -345,11 +324,6 @@ function BodyNosServices() {
               <div>
                 <div className="carousel-image">
                   <img src={pieceplié6} alt="Pièce pliée avec précision" />
-                </div>
-              </div>
-              <div>
-                <div className="carousel-image">
-                  <img src={pieceplié7} alt="Pièce pliée avec précision" />
                 </div>
               </div>
             </Carousel>

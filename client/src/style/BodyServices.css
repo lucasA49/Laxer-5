@@ -71,13 +71,39 @@
   margin-top: 2.27rem;
 }
 
+.specifications li.with-offset-border-3d {
+  position: relative;
+  padding-right: 9.5rem; /* espace pour la fausse bordure */
+}
+
+.specifications-pliage li.with-offset-border-pliage {
+  position: relative;
+  padding-right: 0.7rem;
+}
+
+.specifications-pliage {
+  padding-bottom: 13rem;
+}
+
 .specifications {
+  padding-right: 60px;
+  border-right: 1px solid #ddd;
+  font-size: 1.2rem;
+  padding-bottom: 9rem;
+}
+
+.specifications-2d {
   padding-right: 60px;
   border-right: 1px solid #ddd;
   font-size: 1.2rem;
 }
 
 .specifications li {
+  list-style-type: none;
+  line-height: 4.5rem;
+}
+
+.specifications-2d li {
   list-style-type: none;
   line-height: 4.5rem;
 }
@@ -121,15 +147,6 @@
   align-items: center;
 }
 
-.service-image img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 0;
-}
-
 .carousel-container {
   width: 35%;
   height: 350px;
@@ -150,10 +167,9 @@
 
 .carousel-image img {
   width: 100%;
-  height: 100%;
+  height: 350px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 100;
 }
 
@@ -229,6 +245,15 @@
   }
 
   .specifications {
+    order: 5;
+    border-right: none;
+    padding: 0;
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-right: -2rem;
+  }
+
+  .specifications-2d {
     order: 5;
     border-right: none;
     padding: 0;

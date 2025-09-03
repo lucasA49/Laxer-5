@@ -79,7 +79,8 @@
 }
 
 .text-section h2 {
-  font-size: 3rem;
+  font-size: 2.6rem;
+  line-height: 3.5rem;
   margin-bottom: 0.5rem;
   color: #444;
   font-family: "Raleway", sans-serif;
@@ -95,12 +96,23 @@
   margin-bottom: 200rem; /* Applique un margin-bottom uniquement au dernier h2 */
 }
 
+@keyframes fadeBlink {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 .scrolldown {
   height: auto;
   opacity: 0.7;
   transition: opacity 0.3s ease;
-  position: relative; /* Permet de déplacer l'élément */
-  top: 4rem;
+  position: relative;
+  top: 8rem;
+  animation: fadeBlink 2s ease-in-out infinite;
 }
 
 .scrolldown:hover {
@@ -388,6 +400,7 @@
   .header {
     flex-direction: column;
     align-items: center;
+    margin-top: 15rem;
   }
 
   .header h1 {
@@ -398,10 +411,12 @@
   .header h2 {
     font-size: 2rem;
     margin: 1rem;
+    margin-bottom: -0.5rem;
   }
 
-  .header-images img {
-    max-width: 80%;
+  .header-video {
+    margin-left: 8rem;
+    margin-bottom: 8rem;
   }
 
   .card-container {
@@ -419,7 +434,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 43rem;
+    height: auto;
     padding: 30px;
     margin-top: 6rem;
   }
@@ -431,7 +446,7 @@
   }
 
   .header h1 {
-    font-size: 2.5rem;
+    font-size: 3.6rem;
 
     flex: 1;
     text-align: left;
@@ -440,6 +455,7 @@
   .text-section h2 {
     flex: 1;
     font-size: 1.8rem;
+    line-height: 1.8rem;
   }
 
   .header h2 {
@@ -523,7 +539,6 @@
     width: 100%;
     height: 250px;
     border-radius: 10px;
-    margin-right: 1rem;
   }
 
   /* Call to Action : Placer le texte et bouton sous la carte */

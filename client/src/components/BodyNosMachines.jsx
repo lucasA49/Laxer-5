@@ -9,6 +9,7 @@ import BystarExt from "../assets/Image/BystarExt.jpg";
 import AlphaOpen from "../assets/Image/AlphaOpen.jpg";
 import AlphaClosed from "../assets/Image/AlphaClosed.jpg";
 import Rapido from "../assets/Image/Rapido.jpg";
+import Rapidofermé from "../assets/Image/Rapidofermé.jpg";
 import prcn1 from "../assets/Image/prcn1.jpg";
 import ErmackExt from "../assets/Image/ErmackExt.jpg";
 import ErmackInt from "../assets/Image/ErmackInt.jpg";
@@ -49,20 +50,20 @@ function BodyNosMachines() {
               Tables de découpe 5 axes
             </h3>
             <p>
-              C'est un travail de haute précision, une puissance élevée et une
-              qualité de coupe sans équivalent.
+              Une technologie de découpe laser alliant précision, polyvalence et
+              qualité de coupe.
               <br />
               <br />
               Un ensemble complet parfait pour la production de vos pièces
-              coupées au laser avec les meilleures arrêts réalisables.
+              coupées au laser, même sur les formes les plus complexes.
             </p>
             <div className="technical-details mt-2">
               <div className="row">
                 <div>Machines</div>
                 <div>
-                  Alpha Cube 3020
+                  Alpha Cube 3020 2200 W
                   <br />
-                  Prima Rapido
+                  Prima Rapido 2500 W
                 </div>
               </div>
               <div className="row">
@@ -75,18 +76,13 @@ function BodyNosMachines() {
                 <div>
                   Capacité de <br /> découpe <br /> maximum
                 </div>
-                <div>
-                  Acier : 8 mm / Inox : 2 mm / Aluminium : 3 mm / Galva : 2 mm
-                </div>
+                <div>Acier : 4 mm / Inox : 4 mm / Aluminium : 3 mm</div>
               </div>
               <div className="row">
                 <div>
                   Fichiers <br /> nécessaires
                 </div>
-                <div>
-                  DXF, DWG, STEP ou autres supports : de la pièce unitaire à la
-                  grande série.
-                </div>
+                <div>DXF, IGES, STEP ou autres supports</div>
               </div>
             </div>
           </div>
@@ -101,6 +97,9 @@ function BodyNosMachines() {
             >
               <div>
                 <img src={Rapido} alt="Machine TruLaser 1" />
+              </div>
+              <div>
+                <img src={Rapidofermé} alt="Machine TruLaser 1" />
               </div>
               <div>
                 <img src={AlphaOpen} alt="Machine TruLaser 2" />
@@ -139,49 +138,44 @@ function BodyNosMachines() {
           </div>
           <div className="l-col txt-col">
             <h3 className="ttl_2 slices-in text-cut-up">
-              Tables de découpe Laser
+              Tables de découpe Laser 3 axes
             </h3>
             <p>à commande numérique</p>
             <p>
-              C'est un travail de haute précision, une puissance élevée et une
-              qualité de coupe sans équivalent.
+              Capable de traiter des tôles de différentes épaisseurs avec une
+              qualité de coupe nette et précise, cela garantit des résultats
+              fiables à chaque coupe.
               <br />
               <br />
-              Un ensemble complet parfait pour la production de vos pièces
-              coupées au laser avec les meilleurs arrêts réalisables.
+              Une solution idéale pour les séries, les prototypes ou les
+              productions sur mesure.
             </p>
             <div className="technical-details mt-2">
               <div className="row">
                 <div>Machines</div>
                 <div>
-                  Bystronic / Bystar 4020
+                  Bystronic / Bystar 4020 - 4400 W
                   <br />
-                  Bystronic / Bysprint 3015
+                  Bystronic / Bysprint 3015 - 2200 W
                 </div>
               </div>
               <div className="row">
                 <div>
                   Dimension <br /> maximum
                 </div>
-                <div>1 500 × 3 000 mm</div>
+                <div>2 000 × 4 000 mm</div>
               </div>
               <div className="row">
                 <div>
                   Capacité de <br /> découpe <br /> maximum
                 </div>
-                <div>
-                  Acier : 25 mm / Inox : 15 mm / Aluminium : 12 mm / Galva : 4
-                  mm
-                </div>
+                <div>Acier : 20 mm / Inox : 12 mm / Aluminium : 10 mm</div>
               </div>
               <div className="row">
                 <div>
                   Fichiers <br /> nécessaires
                 </div>
-                <div>
-                  DXF, DWG, STEP ou autres supports : de la pièce unitaire à la
-                  petite série.
-                </div>
+                <div>DXF, IGES, STEP ou autres supports</div>
               </div>
             </div>
           </div>
@@ -195,12 +189,15 @@ function BodyNosMachines() {
             <h3 className="ttl_2 slices-in text-cut-up">Pliage</h3>
             <p>à commande numérique</p>
             <p>
-              C'est un travail de haute précision, une puissance élevée et une
-              qualité de coupe sans équivalent.
+              Le pliage à commande numérique permet de réaliser des formes
+              complexes sur une large gamme de matériaux. Elle offre une grande
+              liberté de conception, tout en respectant les tolérances et les
+              exigences définies par le client.
               <br />
               <br />
-              Un ensemble complet parfait pour la production de vos pièces
-              coupées au laser avec les meilleurs arrêts réalisables.
+              Grâce à notre maîtrise du processus et à des équipements
+              performants, nous répondons aux besoins de pliage les plus
+              exigeants, du prototype à la grande série.
             </p>
             <div className="technical-details mt-2">
               <div className="row">
@@ -225,21 +222,9 @@ function BodyNosMachines() {
               </div>
               <div className="row">
                 <div>
-                  Capacité de <br /> découpe <br /> maximum
-                </div>
-                <div>
-                  Acier : 25 mm / Inox : 15 mm / Aluminium : 12 mm / Galva : 4
-                  mm
-                </div>
-              </div>
-              <div className="row">
-                <div>
                   Fichiers <br /> nécessaires
                 </div>
-                <div>
-                  DXF, DWG, STEP ou autres supports : de la pièce unitaire à la
-                  petite série.
-                </div>
+                <div>DXF, IGES, STEP ou autres supports</div>
               </div>
             </div>
           </div>
@@ -324,7 +309,7 @@ function BodyNosMachines() {
                   <br />
                   Pont Roulant
                 </div>
-                <div>1 500 kg</div>
+                <div>1 250 kg</div>
               </div>
             </div>
           </div>
@@ -336,16 +321,21 @@ function BodyNosMachines() {
         <div className="two-col equipment flex justify-evenly align-center mt-5">
           <div className="l-col txt-col">
             <h3 className="ttl_2 slices-in text-cut-up">
-              Programmation 2D / 3D
+              Programmation 2D / 3D et Pliage
             </h3>
             <p>Sur logiciel de CAO</p>
             <p>
-              C'est un travail de haute précision, une puissance élevée et une
-              qualité de coupe sans équivalent.
+              La programmation des découpes et du pliage est réalisée à l’aide
+              de logiciels de CAO, en s’appuyant sur les fichiers fournis par le
+              client. Ces outils permettent d’anticiper les contraintes liées
+              aux machines, aux matériaux, et aux formes des pièces.
               <br />
               <br />
-              Un ensemble complet parfait pour la production de vos pièces
-              coupées au laser avec les meilleurs arrêts réalisables.
+              Chaque projet est simulé en 2D ou 3D avant fabrication, afin
+              d’optimiser les parcours de coupe, d’organiser les séquences de
+              pliage et de prévenir les risques de collision. Ce travail
+              préparatoire garantit une production fluide, précise et conforme
+              aux exigences techniques.
             </p>
             <div className="technical-details mt-2">
               <div className="row">
@@ -354,6 +344,8 @@ function BodyNosMachines() {
                   Tebis
                   <br />
                   Bysoft
+                  <br />
+                  Profil-60s-Delem
                 </div>
               </div>
               <div className="row">
@@ -363,6 +355,8 @@ function BodyNosMachines() {
                   3D
                   <br />
                   2D
+                  <br />
+                  Pliage
                 </div>
               </div>
               <div className="row">

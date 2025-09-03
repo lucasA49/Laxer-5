@@ -10,7 +10,7 @@ function MentionsLégalesbody() {
           LAXER 5 - ZI de Maunit - 134 rue des Pâtis - 85290 Mortagne-sur-Sèvre
         </p>
         <p>
-          GRATON Jean-Paul & BABARIT Benoît
+          GRATON Jean-Paul
           <br />
           RCS : 504860206
           <br />
