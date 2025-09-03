@@ -12,7 +12,7 @@ function Footer() {
           <div className="info-left">
             <h4>LAXER 5</h4>
             <p>
-              Spécialiste découpe laser 5 axes
+              Spécialiste découpe laser 3 et 5 axes
               <br />
               et pliage de haute précision près de Cholet.
             </p>
@@ -21,7 +21,7 @@ function Footer() {
               <br />
               Horaires : Lundi - Vendredi: 8h - 12h / 13h - 18h
               <br />
-              Téléphone : <a href="tel:+0251575156">02 51 57 51 56</a>
+              Téléphone : <a href="tel:+0251575156">02 51 57 65 15</a>
             </p>
           </div>
           <nav className="footer-links">
@@ -78,7 +78,7 @@ function Footer() {
         <img className="logofooter" src={logo} alt="Logo" />
         <div className="footer-content">
           <p className="textfooter">
-            Copyright © 2024 Laxer 5 | Tous droits réservés. Voir les{" "}
+            Copyright © 2025 Laxer 5 | Tous droits réservés. Voir les{" "}
             <Link className="lienmentionslegales" to="/mentions-legales">
               mentions légales
             </Link>

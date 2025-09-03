@@ -44,11 +44,14 @@ function Bodyhome() {
         <div className="intro-container">
           <div className="text-section">
             <h1>LAXER 5</h1>
-            <h2>Spécialiste</h2>
+            <h2>Expert en Découpe laser 2D / 3D </h2>
+            <h2>Pliage de précision.</h2>
             <h2>
-              <span className="highlight">Découpe laser 2D / 3D</span>
+              <span className="highlight">
+                Solutions industrielles sur mesure
+              </span>
             </h2>
-            <h2>Pliage de haute précision.</h2>
+
             <h2>Près de Nantes</h2>
             <img
               className="scrolldown"
@@ -88,7 +91,7 @@ function Bodyhome() {
               <h3 className="heading">Découpe Laser 3D</h3>
               <p>
                 Nous proposons des solutions de découpe laser de haute précision
-                sur tous types de métaux : acier, aluminium, etc.
+                sur tous types de métaux : acier, inox, aluminium, etc.
               </p>
             </div>
             <div className="button-container">
@@ -104,8 +107,8 @@ function Bodyhome() {
             <div className="content">
               <h3 className="heading">Découpe Laser 2D</h3>
               <p>
-                Prototypage à la production en série, même pour les projets les
-                plus complexes.
+                Du prototypage à la production en série, même pour les projets
+                les plus complexes.
               </p>
             </div>
             <div className="button-container">
@@ -186,7 +189,7 @@ function Bodyhome() {
               <br />
               et découvrir comment nous pouvons vous accompagner
               <br />
-              dans vos ambitions !
+              dans vos projets !
             </p>
             <a href="/contact" className="ctbutton">
               Contactez-nous ➜
