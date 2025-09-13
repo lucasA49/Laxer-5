@@ -6,6 +6,7 @@ import tetealfa3 from "../assets/Image/tetealfa3.jpg";
 import pieceplié from "../assets/Image/pieceplié.jpg";
 import scrolldownicon from "../assets/Image/scrolldownicon.png";
 import logolauréatREvendée from "../assets/Image/logolauréatREvendée.png";
+import { NavLink } from "react-router-dom";
 
 function Bodyhome() {
   const videoRef = useRef(null);
@@ -95,9 +96,12 @@ function Bodyhome() {
               </p>
             </div>
             <div className="button-container">
-              <a href="/services#decoupe-laser-3d" className="discover-button">
+              <NavLink
+                to="/services#decoupe-laser-3d"
+                className="discover-button"
+              >
                 Découvrir ➜
-              </a>
+              </NavLink>
             </div>
           </div>
           <div className="card">
@@ -112,9 +116,12 @@ function Bodyhome() {
               </p>
             </div>
             <div className="button-container">
-              <a href="/services#decoupe-laser-2d" className="discover-button">
+              <NavLink
+                to="/services#decoupe-laser-2d"
+                className="discover-button"
+              >
                 Découvrir ➜
-              </a>
+              </NavLink>
             </div>
           </div>
           <div className="card">
@@ -129,9 +136,10 @@ function Bodyhome() {
               </p>
             </div>
             <div className="button-container">
-              <a href="/services#pliage" className="discover-button">
+              <NavLink
+                to="/services#pliage" className="discover-button">
                 Découvrir ➜
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>

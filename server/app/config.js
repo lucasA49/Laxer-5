@@ -1,153 +1,182 @@
-// Load the express module to create a web application
+// app/config.js
+require('dotenv').config();
 
 const express = require("express");
+const cors = require("cors");
+const multer = require("multer");
+const path = require("path");
+const fs = require("fs");
+const nodemailer = require("nodemailer");
 
 const app = express();
 
-// Configure it
+// CORS
+app.use(cors({
+  origin: ["http://localhost:3000", "http://localhost:5173"]
+}));
 
-/* ************************************************************************* */
+// Parsing
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// CORS Handling: Why is the current code commented out and do I need to define specific allowed origins for my project?
+// Dossier uploads
+const uploadsDir = path.join(__dirname, "../uploads");
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir, { recursive: true });
+  console.log("📁 Dossier uploads créé");
+}
 
-// CORS (Cross-Origin Resource Sharing) is a security mechanism in web browsers that blocks requests from a different domain than the server.
-// You may find the following magic line in forums:
-
-// app.use(cors());
-
-// You should NOT do that: such code uses the `cors` module to allow all origins, which can pose security issues.
-// For this pedagogical template, the CORS code is commented out to show the need for defining specific allowed origins.
-
-// To enable CORS and define allowed origins:
-// 1. Install the `cors` module in the server directory
-// 2. Uncomment the line `const cors = require("cors");`
-// 3. Uncomment the section `app.use(cors({ origin: [...] }))`
-// 4. Be sure to only have URLs in the array with domains from which you want to allow requests.
-// For example: ["http://mysite.com", "http://another-domain.com"]
-
-/*
-const cors = require("cors");
-
-app.use(
-  cors({
-    origin: [
-      process.env.CLIENT_URL, // keep this one, after checking the value in `server/.env`
-      "http://mysite.com",
-      "http://another-domain.com",
-    ]
-  })
-);
-*/
-
-/* ************************************************************************* */
-
-// Request Parsing: Understanding the purpose of this part
-
-// Request parsing is necessary to extract data sent by the client in an HTTP request.
-// For example to access the body of a POST request.
-// The current code contains different parsing options as comments to demonstrate different ways of extracting data.
-
-// 1. `express.json()`: Parses requests with JSON data.
-// 2. `express.urlencoded()`: Parses requests with URL-encoded data.
-// 3. `express.text()`: Parses requests with raw text data.
-// 4. `express.raw()`: Parses requests with raw binary data.
-
-// Uncomment one or more of these options depending on the format of the data sent by your client:
-
-// app.use(express.json());
-// app.use(express.urlencoded());
-// app.use(express.text());
-// app.use(express.raw());
-
-/* ************************************************************************* */
-
-// Cookies: Why and how to use the `cookie-parser` module?
-
-// Cookies are small pieces of data stored in the client's browser. They are often used to store user-specific information or session data.
-
-// The `cookie-parser` module allows us to parse and manage cookies in our Express application. It parses the `Cookie` header in incoming requests and populates `req.cookies` with an object containing the cookies.
-
-// To use `cookie-parser`, make sure it is installed in `server/package.json` (you may need to install it separately):
-// npm install cookie-parser
-
-// Then, require the module and use it as middleware in your Express application:
-
-// const cookieParser = require("cookie-parser");
-// app.use(cookieParser());
-
-// Once `cookie-parser` is set up, you can read and set cookies in your routes.
-// For example, to set a cookie named "username" with the value "john":
-// res.cookie("username", "john");
-
-// To read the value of a cookie named "username":
-// const username = req.cookies.username;
-
-/* ************************************************************************* */
-
-// Import the API router
-const apiRouter = require("./routers/api/router");
-
-// Mount the API router under the "/api" endpoint
-app.use("/api", apiRouter);
-
-/* ************************************************************************* */
-
-// Production-ready setup: What is it for, and when should I enable it?
-
-// The code includes commented sections to set up a production environment where the client and server are executed from the same processus.
-
-// What it's for:
-// - Serving client static files from the server, which is useful when building a single-page application with React.
-// - Redirecting unhandled requests (e.g., all requests not matching a defined API route) to the client's index.html. This allows the client to handle client-side routing.
-
-// When to enable it:
-// It depends on your project and its structure. If you are developing a single-page application, you'll enable these sections when you are ready to deploy your project to production.
-
-// To enable production configuration:
-// 1. Uncomment the lines related to serving static files and redirecting unhandled requests.
-// 2. Ensure that the `reactBuildPath` points to the correct directory where your client's build artifacts are located.
-
-/*
-const path = require("path");
-
-const reactBuildPath = path.join(__dirname, "/../../client/dist");
-const publicFolderPath = path.join(__dirname, "/../public");
-
-// Serve react resources
-
-app.use(express.static(reactBuildPath));
-
-// Serve server resources
-
-app.get("*.*", express.static(publicFolderPath, { maxAge: "1y" }));
-
-// Redirect unhandled requests to the react index file
-
-app.get("*", (_, res) => {
-  res.sendFile(path.join(reactBuildPath, "/index.html"));
+// Multer - MODIFIÉ pour plusieurs fichiers
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => cb(null, uploadsDir),
+  filename: (req, file, cb) => cb(null, Date.now() + '-' + file.originalname),
 });
-*/
 
-/* ************************************************************************* */
+const upload = multer({ 
+  storage,
+  limits: { 
+    fileSize: 10 * 1024 * 1024, // 10MB par fichier
+    files: 10 // Max 10 fichiers
+  }
+});
 
-// Middleware for Error Logging (Uncomment to enable)
-// Important: Error-handling middleware should be defined last, after other app.use() and routes calls.
+// Nodemailer - MODIFIÉ pour Outlook ou Gmail
+const emailService = process.env.EMAIL_SERVICE || 'gmail'; // 'gmail' ou 'outlook'
 
-/*
-// Define a middleware function to log errors
-const logErrors = (err, req, res, next) => {
-  // Log the error to the console for debugging purposes
-  console.error(err);
-  console.error("on req:", req.method, req.path);
+let transporterConfig = {};
+if (emailService === 'outlook') {
+  transporterConfig = {
+    service: "hotmail", // Pour Outlook/Hotmail
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS
+    }
+  };
+  console.log("📧 Configuration Outlook");
+} else {
+  transporterConfig = {
+    service: "gmail",
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS
+    }
+  };
+  console.log("📧 Configuration Gmail");
+}
 
-  // Pass the error to the next middleware in the stack
-  next(err);
-};
+const transporter = nodemailer.createTransport(transporterConfig);
 
-// Mount the logErrors middleware globally
-app.use(logErrors);
-*/
+// Test config au démarrage
+if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
+  transporter.verify((error, success) => {
+    if (error) {
+      console.error("❌ Erreur email:", error.message);
+    } else {
+      console.log("✅ Email configuré pour:", process.env.EMAIL_USER);
+    }
+  });
+} else {
+  console.error("❌ Variables EMAIL_USER et EMAIL_PASS manquantes dans .env");
+}
 
-/* ************************************************************************* */
+// Route contact - MODIFIÉE pour plusieurs fichiers
+app.post("/api/contact", upload.array('fichiers', 10), async (req, res) => {
+  try {
+    const { firstName, email, phone, message } = req.body;
+    const fichiers = req.files || []; // PLUSIEURS fichiers maintenant
+
+    console.log("📨 Message reçu de:", firstName, email);
+    console.log("📎 Nombre de fichiers:", fichiers.length);
+
+    // Création du HTML avec liste des fichiers
+    let fichiersHTML = '';
+    if (fichiers.length > 0) {
+      fichiersHTML = `
+        <p><strong>Fichiers joints (${fichiers.length}):</strong></p>
+        <ul>
+          ${fichiers.map(f => `<li>${f.originalname} (${(f.size / 1024).toFixed(2)} KB)</li>`).join('')}
+        </ul>
+      `;
+    }
+
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_DEST || process.env.EMAIL_USER, // Email de destination
+      replyTo: email,
+      subject: `Nouveau message de ${firstName}${fichiers.length > 0 ? ` (${fichiers.length} fichier${fichiers.length > 1 ? 's' : ''})` : ''}`,
+      html: `
+        <h2>Nouveau message de contact</h2>
+        <p><strong>Nom:</strong> ${firstName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Téléphone:</strong> ${phone || 'Non renseigné'}</p>
+        <p><strong>Message:</strong></p>
+        <p style="background:#f5f5f5; padding:10px; border-left:3px solid #007bff;">${message}</p>
+        ${fichiersHTML}
+        <hr>
+        <small>Reçu le ${new Date().toLocaleString('fr-FR')}</small>
+      `,
+      // ATTACHMENTS multiples
+      attachments: fichiers.map(fichier => ({
+        filename: fichier.originalname,
+        path: fichier.path
+      }))
+    };
+
+    await transporter.sendMail(mailOptions);
+
+    // Supprimer TOUS les fichiers
+    fichiers.forEach(fichier => {
+      if (fs.existsSync(fichier.path)) {
+        fs.unlinkSync(fichier.path);
+      }
+    });
+
+    console.log("✅ Email envoyé avec succès");
+    res.json({ 
+      success: true, 
+      message: `Message envoyé avec succès ! ${fichiers.length > 0 ? `(${fichiers.length} fichier${fichiers.length > 1 ? 's' : ''} joint${fichiers.length > 1 ? 's' : ''})` : ''}` 
+    });
+
+  } catch (err) {
+    console.error("❌ Erreur:", err.message);
+    
+    // Nettoyer TOUS les fichiers en cas d'erreur
+    if (req.files) {
+      req.files.forEach(file => {
+        if (fs.existsSync(file.path)) {
+          fs.unlinkSync(file.path);
+        }
+      });
+    }
+    
+    res.status(500).json({ 
+      success: false, 
+      message: "Erreur lors de l'envoi du message" 
+    });
+  }
+});
+
+// Route de test
+app.get("/api/test", (req, res) => {
+  res.json({ 
+    success: true, 
+    message: "🎉 API fonctionnelle !",
+    emailService: emailService,
+    maxFiles: 10,
+    timestamp: new Date().toISOString()
+  });
+});
+
+// Démarrage du serveur
+const PORT = process.env.PORT || 5000;
+
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log('🚀 Serveur démarré sur le port:', PORT);
+    console.log('🌐 URL: http://localhost:' + PORT);
+    console.log('🔗 Test: http://localhost:' + PORT + '/api/test');
+    console.log('📧 Service:', emailService);
+  });
+}
 
 module.exports = app;

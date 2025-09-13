@@ -9,9 +9,12 @@
     "test": "jest"
   },
   "dependencies": {
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "mysql2": "^3.6.7"
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "multer": "^2.0.2",
+    "mysql2": "^3.6.7",
+    "nodemailer": "^7.0.6"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
@@ -19,12 +22,25 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
     "jest": "^29.7.0",
-    "nodemon": "^3.1.0",
+    "nodemon": "^3.1.10",
     "prettier": "3.2.5",
     "supertest": "^7.0.0"
   },
   "lint-staged": {
     "*.sql": "prettier --check",
     "*.js": "eslint --report-unused-disable-directives"
-  }
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "server": "bin/migrate.js"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
 }
