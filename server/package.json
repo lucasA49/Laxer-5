@@ -5,7 +5,7 @@
     "db:migrate": "node ./bin/migrate.js",
     "db:seed": "node ./bin/seed.js",
     "build": "node ./bin/migrate.js",
-    "start": "node index.js",
+    "start": "node app/config.js",
     "test": "jest"
   },
   "dependencies": {
