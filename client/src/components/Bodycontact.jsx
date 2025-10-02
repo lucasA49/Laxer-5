@@ -10,21 +10,19 @@ function BodyContact() {
     email: "",
     phone: "",
     message: "",
-    fichier: null,
+    fichiers: [], // <— tableau
   });
   const [notification, setNotification] = useState("");
 
-  // Gérer les changements des inputs
   const handleChange = (e) => {
     const { name, value, files } = e.target;
-    if (name === "fichier") {
-      setFormData({ ...formData, fichier: files[0] });
+    if (name === "fichiers") {
+      setFormData({ ...formData, fichiers: Array.from(files) });
     } else {
       setFormData({ ...formData, [name]: value });
     }
   };
 
-  // Soumission du formulaire
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -33,19 +31,17 @@ function BodyContact() {
     form.append("email", formData.email);
     form.append("phone", formData.phone);
     form.append("message", formData.message);
-    if (formData.fichier) form.append("fichier", formData.fichier);
+    formData.fichiers.forEach((f) => form.append("fichiers", f)); // <— clé 'fichiers'
 
     try {
-      const res = await fetch('http://localhost:5000/api/contact', {
+      const res = await fetch("http://localhost:5000/api/contact", {
         method: "POST",
         body: form,
       });
-      const text = await res.text();
-      setNotification(text);
+      const data = await res.json();
+      setNotification(data.message || "Message envoyé.");
     } catch (err) {
-      setNotification(
-        "Échec de l'envoi de votre demande. Veuillez réessayer."
-      );
+      setNotification("Échec de l'envoi de votre demande. Veuillez réessayer.");
     }
 
     setTimeout(() => setNotification(""), 5000);
@@ -55,7 +51,7 @@ function BodyContact() {
       email: "",
       phone: "",
       message: "",
-      fichier: null,
+      fichiers: [],
     });
   };
 
@@ -135,7 +131,7 @@ function BodyContact() {
               onChange={handleChange}
               required
             />
-            <input type="file" name="fichier" onChange={handleChange} />
+            <input type="file" name="fichiers" onChange={handleChange} />
             <button type="submit">Envoyer</button>
           </form>
         </div>
