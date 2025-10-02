@@ -7,9 +7,22 @@ const multer = require("multer");
 
 // --- App & middlewares
 const app = express();
+
+// CORS: lit CLIENT_URLS du .env (séparées par des virgules), fallback localhost
+const allowedOrigins = (process.env.CLIENT_URLS || "http://localhost:3000,http://localhost:5173")
+  .split(",")
+  .map(s => s.trim())
+  .filter(Boolean);
+
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:5173"]
+  origin: (origin, cb) => {
+    // Autorise Postman/cURL (pas d'Origin)
+    if (!origin) return cb(null, true);
+    if (allowedOrigins.includes(origin)) return cb(null, true);
+    return cb(new Error("Not allowed by CORS"));
+  }
 }));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -22,11 +35,12 @@ const upload = multer({
   }
 });
 
-// --- Mailjet client
-const mailjet = require("node-mailjet").connect(
-  process.env.MAILJET_API_KEY,
-  process.env.MAILJET_SECRET_KEY
-);
+// --- Mailjet client (API)
+const Mailjet = require("node-mailjet");
+const mailjet = new Mailjet({
+  apiKey: process.env.MAILJET_API_KEY,
+  apiSecret: process.env.MAILJET_SECRET_KEY,
+});
 
 // Helper simple pour valider un email "correct"
 const looksLikeEmail = (s) => typeof s === "string" && /\S+@\S+\.\S+/.test(s);
@@ -114,14 +128,22 @@ app.get("/api/test", (req, res) => {
   });
 });
 
-// --- Démarrage
+// --- Démarrage (auto-start même si require() depuis index.js)
+//   - Met NO_AUTOSTART=true dans le .env pour ne PAS autostart (tests, etc.)
 const PORT = process.env.PORT || 5000;
-if (require.main === module) {
-  app.listen(PORT, () => {
+let server;
+function start() {
+  if (server) return server;
+  server = app.listen(PORT, () => {
     console.log('🚀 Serveur démarré sur le port:', PORT);
     console.log('🌐 URL: http://localhost:' + PORT);
-    console.log('📧 Provider: Mailjet');
+    console.log('📧 Provider: Mailjet (API)');
   });
+  return server;
+}
+if (process.env.NO_AUTOSTART !== 'true') {
+  start();
 }
 
 module.exports = app;
+module.exports.start = start;
