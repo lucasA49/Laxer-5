@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0a0a0a;
+  z-index: 9999;
+}
+
+.spinner-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.spinner-word {
+  display: flex;
+  align-items: baseline;
+}
+
+.spinner-letter {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 5.5rem;
+  line-height: 1;
+  color: #fff;
+  opacity: 0;
+  animation: spLetter 3.6s ease-in-out infinite;
+}
+
+.spinner-letter.red { color: #d10101; }
+
+.spinner-letter:nth-child(1) { animation-delay: 0.0s; }
+.spinner-letter:nth-child(2) { animation-delay: 0.12s; }
+.spinner-letter:nth-child(3) { animation-delay: 0.24s; }
+.spinner-letter:nth-child(4) { animation-delay: 0.36s; }
+.spinner-letter:nth-child(5) { animation-delay: 0.48s; }
+.spinner-letter:nth-child(6) { animation-delay: 0.60s; }
+.spinner-letter:nth-child(7) { animation-delay: 0.72s; }
+
+@keyframes spLetter {
+  0%   { opacity: 0; transform: translateY(16px); }
+  15%  { opacity: 1; transform: translateY(0); }
+  70%  { opacity: 1; transform: translateY(0); }
+  85%  { opacity: 0; transform: translateY(-8px); }
+  100% { opacity: 0; transform: translateY(-8px); }
+}
+
+.spinner-bar {
+  width: 50px;
+  height: 2px;
+  background: transparent;
+  border-radius: 2px;
+  overflow: hidden;
+  opacity: 0;
+  animation: spFade 3.6s ease-in-out infinite;
+  animation-delay: 0.9s;
+}
+
+.spinner-bar::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 40%;
+  background: #d10101;
+  border-radius: 2px;
+  animation: spSlide 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes spFade {
+  0%   { opacity: 0; }
+  25%  { opacity: 1; }
+  70%  { opacity: 1; }
+  90%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes spSlide {
+  0%   { transform: translateX(-20%); }
+  100% { transform: translateX(200%); }
+}

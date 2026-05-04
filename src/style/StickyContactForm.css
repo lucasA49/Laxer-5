@@ -1,0 +1,221 @@
+.stickyForm {
+  position: sticky;
+  top: 140px;
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
+  background: #0b0b0b;
+  color: #fff;
+  border-radius: 22px;
+  padding: 34px 26px 26px;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, .35);
+}
+
+.stickyForm__title {
+  margin: 0 0 16px;
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: .2px;
+}
+
+.stickyForm__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stickyForm__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stickyForm__label {
+  font-size: 14px;
+  opacity: .9;
+}
+
+.stickyForm__input,
+.stickyForm__textarea {
+  background: #111;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 15px;
+  outline: none;
+  transition: background .25s ease, color .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.stickyForm__input.isFilled,
+.stickyForm__textarea.isFilled {
+  background: #fff;
+  color: #000;
+  border: 1px solid #fff;
+}
+
+.stickyForm__input:-webkit-autofill,
+.stickyForm__input:-webkit-autofill:hover,
+.stickyForm__input:-webkit-autofill:focus,
+.stickyForm__textarea:-webkit-autofill,
+.stickyForm__textarea:-webkit-autofill:hover,
+.stickyForm__textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000 !important;
+  box-shadow: 0 0 0 1000px #fff inset !important;
+  transition: background-color 9999s ease-out 0s;
+}
+
+.stickyForm__textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.stickyForm__input:hover,
+.stickyForm__textarea:hover {
+  background: #fff;
+  color: #000;
+}
+
+.stickyForm__input:focus,
+.stickyForm__textarea:focus {
+  border-color: #c71610;
+  box-shadow: 0 0 0 3px rgba(199, 22, 16, .25);
+}
+
+.stickyForm__files {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stickyForm__fileInput {
+  display: none;
+}
+
+.stickyForm__fileBtn {
+  width: fit-content;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, .75);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.stickyForm__fileBtn:hover {
+  border-color: #fff;
+}
+
+.stickyForm__fileList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.stickyForm__fileRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, .06);
+  border-radius: 12px;
+}
+
+.stickyForm__fileName {
+  font-size: 13px;
+  opacity: .95;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.stickyForm__fileRemove {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, .85);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.stickyForm__fileRemove:hover {
+  color: #fff;
+}
+
+.stickyForm__notif {
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .08);
+}
+
+.stickyForm__submit {
+  margin-top: 8px;
+  height: 46px;
+  border: none;
+  border-radius: 999px;
+  background: #c71610;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.stickyForm__submit:disabled {
+  opacity: .7;
+  cursor: not-allowed;
+}
+
+.stickyForm::-webkit-scrollbar {
+  width: 4px;
+}
+
+.stickyForm::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.stickyForm::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, .2);
+  border-radius: 999px;
+}
+
+.stickyForm::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, .4);
+}
+
+.formModalInner .stickyForm {
+  display: block;
+  position: static;
+  max-height: none;
+  box-shadow: none;
+  border-radius: 0;
+  margin: 0 12px 24px;
+  padding: 8px 20px 32px;
+}
+
+/* ── Cache le formulaire en dessous de 1300px ── */
+@media (max-width: 1300px) {
+  .stickyForm {
+    display: none;
+  }
+}
+
+/* ── Mobile : styles internes uniquement, PAS de display ── */
+@media (max-width: 640px) {
+  .stickyForm__title {
+    font-size: 26px;
+  }
+
+  .stickyForm__input,
+  .stickyForm__textarea {
+    font-size: 16px;
+  }
+
+  .stickyForm__submit {
+    height: 52px;
+    font-size: 16px;
+    width: 100%;
+  }
+}
